@@ -20,21 +20,21 @@ const CONFIG = {
       grupo: "Procedimientos",
       titulo: "Procedimiento de Compras Descentralizadas",
       descripcion: "Desde la solicitud de compra hasta la notificación de la adjudicación y el archivo del expediente.",
-      archivo: "./documentos/PR-01.pdf",
+      archivo: "./PR-01.pdf",
       formato: "PDF"
     },
     "PR-02": {
       grupo: "Procedimientos",
       titulo: "Procedimiento de Compras Centralizadas",
       descripcion: "Compras que se tramitan con la intervención de la Unidad U5320.",
-      archivo: "./documentos/PR-02.pdf",
+      archivo: "./PR-02.pdf",
       formato: "PDF"
     },
     "PR-03": {
       grupo: "Procedimientos",
       titulo: "Utilización de Servicios Contratados por Pedido SAP",
       descripcion: "Cómo se solicitan, coordinan, verifican y registran los servicios que ya cuentan con pedido SAP.",
-      archivo: "./documentos/PR-03.pdf",
+      archivo: "./PR-03.pdf",
       formato: "PDF"
     },
     "PROTOCOLO": {
@@ -42,7 +42,7 @@ const CONFIG = {
       codigo: "Marco",
       titulo: "Protocolo de Actuación de Almacenes y Compras de Servicios Generales",
       descripcion: "Documento marco de los procedimientos. Establece responsabilidades de las dependencias, Compras y Almacenes.",
-      archivo: "./documentos/protocolo.pdf",
+      archivo: "./protocolo.pdf",
       formato: "PDF"
     },
     "RET-SERVICIOS": {
@@ -50,7 +50,7 @@ const CONFIG = {
       codigo: "Modelo",
       titulo: "Requisitos y Especificaciones Técnicas · Servicios",
       descripcion: "Plantilla editable para preparar los requisitos y especificaciones técnicas de un servicio.",
-      archivo: "./documentos/RET-Servicios.docx",
+      archivo: "./RET-Servicios.docx",
       formato: "Word",
       soloDescarga: true
     }
@@ -59,7 +59,7 @@ const CONFIG = {
       grupo: "Procedimientos",
       titulo: "Nombre del procedimiento",
       descripcion: "Descripción breve.",
-      archivo: "./documentos/PR-04.pdf",
+      archivo: "./PR-04.pdf",
       formato: "PDF"
     }
     Grupos previstos: "Procedimientos", "Documento marco", "Modelos",
