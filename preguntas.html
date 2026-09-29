@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es-UY">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Preguntas frecuentes · Portal Operativo de Compras</title>
+  <meta name="description" content="Respuestas breves sobre compras, servicios contratados y conformidad técnica.">
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Ir al contenido</a>
+
+  <header class="inst-header">
+    <div class="container inst-header__inner">
+      <div class="inst-brand">
+        <!-- EDITAR AQUÍ: logotipo institucional. Reemplazar el archivo assets/img/logo-im.png manteniendo el nombre. -->
+        <a href="./index.html" aria-label="Portal Operativo de Compras, inicio">
+          <img class="inst-logo" src="./assets/img/logo-im.png" alt="Intendencia de Montevideo" width="190" height="52">
+        </a>
+        <div class="inst-units">
+          <strong class="u-dept">Departamento de Desarrollo Ambiental</strong>
+          <strong>División Limpieza y Gestión de Residuos</strong>
+          <span>Gerencia de Suministros y Contrataciones</span>
+        </div>
+      </div>
+      <div class="portal-id">
+        <a class="portal-id__name" href="./index.html">Portal Operativo de Compras</a>
+        <span class="portal-id__sub">Mantenimiento</span>
+        <!-- La versión y el estado se editan en js/app.js (CONFIG) -->
+        <span class="version-tag"><span data-cfg="version">V0.1</span> · <span data-cfg="estado">Portal en desarrollo</span></span>
+      </div>
+    </div>
+    <hr class="inst-rule">
+  </header>
+
+  <nav class="site-nav" aria-label="Navegación principal">
+    <div class="container site-nav__inner">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-list">
+        <span class="nav-toggle__bars" aria-hidden="true"></span> Menú
+      </button>
+      <ul class="nav-list" id="nav-list">
+          <li><a href="./index.html">Inicio</a></li>
+          <li><a href="./como-empezar.html">Cómo empezar</a></li>
+          <li><a href="./procedimientos.html">Procedimientos</a></li>
+          <li><a href="./servicios.html">Servicios contratados</a></li>
+          <li><a href="./documentos.html">Documentos</a></li>
+          <li><a href="./preguntas.html" aria-current="page">Preguntas frecuentes</a></li>
+          <li><a href="./preguntas.html#contacto">Contacto</a></li>
+      </ul>
+      <form class="search" id="search-form" role="search" autocomplete="off">
+        <label for="search-input">Buscar en el portal</label>
+        <input id="search-input" type="search" placeholder="Buscar en el portal..." aria-controls="search-results" aria-expanded="false">
+        <ul class="search-results" id="search-results" hidden aria-live="polite"></ul>
+      </form>
+    </div>
+  </nav>
+
+  <main id="contenido" tabindex="-1">
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Ruta de navegación">
+        <ol><li><a href="./index.html">Inicio</a></li><li aria-current="page">Preguntas frecuentes</li></ol>
+      </nav>
+    </div>
+    <div class="container page-head">
+      <h1>Preguntas frecuentes</h1>
+      <p>Respuestas breves basadas en el Protocolo, los procedimientos PR-01, PR-02 y PR-03 y el modelo de Requisitos y Especificaciones Técnicas. Para el detalle completo, consultá los documentos.</p>
+    </div>
+
+    <section class="section faq">
+      <div class="container">
+        <div class="faq-group">
+          <h2>Iniciar una compra</h2>
+          <details id="faq-presentar">
+            <summary>¿Qué tengo que presentar para iniciar una compra?</summary>
+            <div class="details-body"><p>Una solicitud de compra con la justificación de la necesidad, las cantidades requeridas, el plazo estimado de utilización o ejecución, la disponibilidad presupuestal cuando corresponda y la prioridad de la contratación.</p><p>Además, la documentación técnica que define lo que necesitás. Sin documentación técnica no se inicia el procedimiento.</p><p><a href="./como-empezar.html">Ver cómo empezar</a></p></div>
+          </details>
+          <details id="faq-especificaciones">
+            <summary>¿Quién prepara las especificaciones técnicas?</summary>
+            <div class="details-body"><p>La dependencia solicitante. Es quien conoce técnicamente lo que necesita: define las especificaciones, los requisitos mínimos de admisibilidad y elabora la documentación técnica.</p><p>Compras respeta las especificaciones tal como fueron definidas: no las modifica ni las interpreta.</p><p><span class="notice-source">Protocolo, numerales 6 y 7.</span></p></div>
+          </details>
+          <details id="faq-ayuda">
+            <summary>¿Compras puede ayudarme a preparar la solicitud?</summary>
+            <div class="details-body"><p>Sí. Compras orienta a la dependencia para estructurar la solicitud y la documentación técnica, y revisa que la solicitud esté completa. El contenido técnico lo define la dependencia.</p><p>Para servicios, podés partir del <a href="./documentos.html">modelo de Requisitos y Especificaciones Técnicas</a>.</p></div>
+          </details>
+          <details id="faq-diferencia">
+            <summary>¿Cuál es la diferencia entre una compra descentralizada y una centralizada?</summary>
+            <div class="details-body"><p>En la compra centralizada (PR-02) interviene además la Unidad U5320, que asigna el escribano, confecciona el pliego, publica, adjudica y notifica. En ambos casos la dependencia mantiene la intervención técnica.</p><p>La Gerencia de Suministros y Contrataciones determinará el procedimiento administrativo que corresponda de acuerdo con las características de la contratación. No necesitás saberlo de antemano para iniciar la solicitud.</p><p><a href="./procedimientos.html#comparacion">Ver la comparación</a></p></div>
+          </details>
+        </div>
+
+        <div class="faq-group">
+          <h2>Durante el procedimiento</h2>
+          <details id="faq-consultas">
+            <summary>¿Quién responde una consulta técnica de un proveedor?</summary>
+            <div class="details-body"><p>La dependencia solicitante, a través de su referente técnico. Las consultas técnicas se derivan al referente, que las responde a tiempo para que se comuniquen dentro del plazo de publicación.</p></div>
+          </details>
+          <details id="faq-evaluacion">
+            <summary>¿Quién evalúa técnicamente las ofertas?</summary>
+            <div class="details-body"><p>La dependencia solicitante o los técnicos que ésta designe. Elabora un informe técnico con la verificación del cumplimiento de las especificaciones, el análisis comparativo de las ofertas, los fundamentos técnicos de aceptación o rechazo y la conclusión y recomendación técnica.</p><p>Con base en ese informe, Compras (PR-01) o la Unidad U5320 (PR-02) realiza la evaluación administrativa y económica.</p></div>
+          </details>
+        </div>
+
+        <div class="faq-group">
+          <h2>Servicios contratados y conformidad</h2>
+          <details id="faq-solicitar-servicio">
+            <summary>¿Cómo solicito un servicio que ya está contratado?</summary>
+            <div class="details-body"><p>Contactá a Compras indicando qué servicio necesitás, dónde debe realizarse, la urgencia y la información técnica necesaria para identificar el trabajo. Compras verificará el saldo disponible del pedido y coordinará la utilización del servicio.</p><p><a href="./servicios.html">Ver el circuito completo</a></p></div>
+          </details>
+          <details id="faq-conformidad">
+            <summary>¿Quién da la conformidad de un servicio?</summary>
+            <div class="details-body"><p>La dependencia solicitante o el responsable técnico designado. Verifica técnicamente el trabajo y comunica la conformidad a Compras, citando o adjuntando el remito. Si no está conforme, indica las observaciones.</p><p><span class="notice-source">Protocolo, numeral 11; PR-03, actividad 5.</span></p></div>
+          </details>
+          <details id="faq-saldo">
+            <summary>¿Qué pasa si el pedido SAP ya no tiene saldo?</summary>
+            <div class="details-body"><p>Antes de coordinar cada trabajo, Compras verifica que el pedido tenga saldo disponible. Las condiciones del modelo de Requisitos y Especificaciones Técnicas para servicios establecen que, agotado el saldo, no pueden continuarse servicios con cargo a ese pedido, salvo que exista una nueva habilitación o contratación administrativa. Consultá con Compras cómo seguir.</p><p><span class="notice-source">PR-03, actividad 3; modelo de Requisitos y Especificaciones Técnicas, sección 4.</span></p></div>
+          </details>
+          <details id="faq-remito">
+            <summary>¿El remito significa que el servicio quedó aprobado?</summary>
+            <div class="details-body"><p>No. El remito respalda lo realizado, pero no constituye por sí solo la conformidad. La conformidad técnica la otorga la dependencia solicitante, con referencia al remito.</p></div>
+          </details>
+          <details id="faq-facturar">
+            <summary>¿Cuándo puede facturar el proveedor?</summary>
+            <div class="details-body"><p>Cuando Compras genera la hoja de servicio en SAP y le comunica su número. La hoja de servicio se genera con la conformidad técnica de la dependencia y el remito de la empresa. Por eso, dar la conformidad a tiempo evita demoras en la facturación.</p></div>
+          </details>
+        </div>
+
+        <div class="faq-group">
+          <h2>Documentos</h2>
+          <details id="faq-documentos">
+            <summary>¿Dónde encuentro los procedimientos completos?</summary>
+            <div class="details-body"><p>En la sección <a href="./documentos.html">Documentos</a> están PR-01, PR-02, PR-03, el Protocolo de Actuación de Almacenes y Compras de Servicios Generales y el modelo de Requisitos y Especificaciones Técnicas para servicios.</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--band" id="contacto" aria-labelledby="contacto-titulo">
+      <div class="container">
+        <div class="contact">
+          <h2 id="contacto-titulo">¿No encontraste lo que necesitabas?</h2>
+          <p>Podés comunicarte con la Gerencia de Suministros y Contrataciones para recibir orientación.</p>
+          <!-- EDITAR AQUÍ: el correo se configura en js/app.js (CONFIG.correo) -->
+          <p class="contact__mail"><span data-cfg="correo">comprasyalmacenes.suministros@imm.gub.uy</span></p>
+          <div class="btn-row">
+            <a class="btn" data-cfg-mail="Consulta desde el Portal Operativo de Compras" href="mailto:comprasyalmacenes.suministros@imm.gub.uy">Enviar consulta</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <div class="footer-units">
+        <span class="u-dept">Departamento de Desarrollo Ambiental</span>
+        <span>División Limpieza y Gestión de Residuos</span>
+        <span>Gerencia de Suministros y Contrataciones</span>
+      </div>
+      <div class="footer-meta">
+        <p><strong>Portal Operativo de Compras · <span data-cfg="version">V0.1</span></strong></p>
+        <p><em data-cfg="aviso">Contenido en proceso de actualización y mejora.</em></p>
+        <p><a data-cfg-mail="" href="mailto:comprasyalmacenes.suministros@imm.gub.uy"><span data-cfg="correo">comprasyalmacenes.suministros@imm.gub.uy</span></a></p>
+        <p><a href="./index.html#sobre">Sobre este portal</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./js/app.js"></script>
+</body>
+</html>

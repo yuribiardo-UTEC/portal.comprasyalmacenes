@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="es-UY">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Procedimientos · Portal Operativo de Compras</title>
+  <meta name="description" content="Compra descentralizada (PR-01) y compra centralizada (PR-02): etapas, responsables y diferencias.">
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Ir al contenido</a>
+
+  <header class="inst-header">
+    <div class="container inst-header__inner">
+      <div class="inst-brand">
+        <!-- EDITAR AQUÍ: logotipo institucional. Reemplazar el archivo assets/img/logo-im.png manteniendo el nombre. -->
+        <a href="./index.html" aria-label="Portal Operativo de Compras, inicio">
+          <img class="inst-logo" src="./assets/img/logo-im.png" alt="Intendencia de Montevideo" width="190" height="52">
+        </a>
+        <div class="inst-units">
+          <strong class="u-dept">Departamento de Desarrollo Ambiental</strong>
+          <strong>División Limpieza y Gestión de Residuos</strong>
+          <span>Gerencia de Suministros y Contrataciones</span>
+        </div>
+      </div>
+      <div class="portal-id">
+        <a class="portal-id__name" href="./index.html">Portal Operativo de Compras</a>
+        <span class="portal-id__sub">Mantenimiento</span>
+        <!-- La versión y el estado se editan en js/app.js (CONFIG) -->
+        <span class="version-tag"><span data-cfg="version">V0.1</span> · <span data-cfg="estado">Portal en desarrollo</span></span>
+      </div>
+    </div>
+    <hr class="inst-rule">
+  </header>
+
+  <nav class="site-nav" aria-label="Navegación principal">
+    <div class="container site-nav__inner">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-list">
+        <span class="nav-toggle__bars" aria-hidden="true"></span> Menú
+      </button>
+      <ul class="nav-list" id="nav-list">
+          <li><a href="./index.html">Inicio</a></li>
+          <li><a href="./como-empezar.html">Cómo empezar</a></li>
+          <li><a href="./procedimientos.html" aria-current="page">Procedimientos</a></li>
+          <li><a href="./servicios.html">Servicios contratados</a></li>
+          <li><a href="./documentos.html">Documentos</a></li>
+          <li><a href="./preguntas.html">Preguntas frecuentes</a></li>
+          <li><a href="./preguntas.html#contacto">Contacto</a></li>
+      </ul>
+      <form class="search" id="search-form" role="search" autocomplete="off">
+        <label for="search-input">Buscar en el portal</label>
+        <input id="search-input" type="search" placeholder="Buscar en el portal..." aria-controls="search-results" aria-expanded="false">
+        <ul class="search-results" id="search-results" hidden aria-live="polite"></ul>
+      </form>
+    </div>
+  </nav>
+
+  <main id="contenido" tabindex="-1">
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Ruta de navegación">
+        <ol><li><a href="./index.html">Inicio</a></li><li aria-current="page">Procedimientos</li></ol>
+      </nav>
+    </div>
+    <div class="container page-head">
+      <h1>Procedimientos de compra</h1>
+      <p>Esta sección presenta los procedimientos de compra descentralizada (PR-01) y de compra centralizada (PR-02). En ambos la dependencia solicitante mantiene la intervención técnica y la Gerencia de Suministros y Contrataciones conduce la tramitación.</p>
+      <nav class="subnav" aria-label="En esta página">
+        <a href="#comparacion">Diferencias</a>
+        <a href="#pr01">PR-01 · Descentralizada</a>
+        <a href="#pr02">PR-02 · Centralizada</a>
+        <a href="#despues">Después de la adjudicación</a>
+      </nav>
+    </div>
+
+    <section class="section" id="comparacion" aria-labelledby="comp-titulo">
+      <div class="container">
+        <h2 id="comp-titulo">¿En qué se diferencian?</h2>
+        <div class="notice">
+          <span class="notice__label">¿Cuál corresponde a mi compra?</span>
+          <p>La Gerencia de Suministros y Contrataciones determinará el procedimiento administrativo que corresponda de acuerdo con las características de la contratación. Tu dependencia no necesita saberlo de antemano para presentar la solicitud.</p>
+        </div>
+        <div class="table-wrap">
+          <table class="table-compare">
+            <thead><tr><th scope="col">Aspecto</th><th scope="col">PR-01 · Descentralizada</th><th scope="col">PR-02 · Centralizada</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Intervienen</th><td>Dependencia solicitante / referente técnico y Gerencia de Suministros y Contrataciones.</td><td>Dependencia solicitante / referente técnico, Gerencia de Suministros y Contrataciones y Unidad U5320.</td></tr>
+              <tr><th scope="row">Registro en SAP</th><td>Compras carga la Solicitud de Pedido y, grabada y aprobada, la remite a la Unidad U5881.</td><td>Compras ingresa la Solicitud de Pedido, recibe las autorizaciones, arma el expediente y lo remite a la Unidad U5320.</td></tr>
+              <tr><th scope="row">Documento del llamado</th><td>Compras prepara la publicación a partir de la documentación técnica, respetando su contenido.</td><td>Pliego de condiciones: el escribano asignado por U5320 elabora el borrador, la dependencia valida el contenido técnico y U5320 confecciona el pliego definitivo.</td></tr>
+              <tr><th scope="row">Publicación</th><td>Compras, por un plazo no inferior a tres días.</td><td>Unidad U5320, por el plazo que corresponda; invita a proveedores.</td></tr>
+              <tr><th scope="row">Consultas técnicas</th><td colspan="2">Se derivan al referente técnico. La dependencia las responde a tiempo para comunicarlas dentro del plazo de publicación.</td></tr>
+              <tr><th scope="row">Evaluación técnica</th><td colspan="2">Dependencia solicitante: informe técnico con su recomendación.</td></tr>
+              <tr><th scope="row">Evaluación administrativa y económica</th><td>Compras.</td><td>Unidad U5320.</td></tr>
+              <tr><th scope="row">Adjudicación y notificación</th><td>Compras genera el pedido de adjudicación en SAP y notifica.</td><td>Unidad U5320 crea el pedido de adjudicación y notifica.</td></tr>
+              <tr><th scope="row">Cierre</th><td>Compras archiva el expediente.</td><td>Compras recibe el expediente y lo archiva.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--band" id="pr01" aria-labelledby="pr01-titulo">
+      <div class="container">
+        <div class="proc-head"><span class="proc-code">PR-01</span><h2 id="pr01-titulo">Compra descentralizada</h2></div>
+        <p class="section-lead">Se aplica a las compras descentralizadas de bienes, repuestos, insumos, equipamiento y servicios que soliciten las dependencias de la División.</p>
+        <dl class="facts">
+          <div><dt>Comienza con</dt><dd>La solicitud de compra de la dependencia, con su documentación técnica.</dd></div>
+          <div><dt>Termina con</dt><dd>El pedido de adjudicación notificado y el expediente archivado.</dd></div>
+          <div><dt>Registro oficial</dt><dd>SAP y expediente electrónico.</dd></div>
+        </dl>
+
+        <div class="split">
+          <div class="split__col">
+            <h3>Qué aporta tu dependencia</h3>
+            <ul>
+              <li>Explica la necesidad y define el objeto y las cantidades.</li>
+              <li>Presenta la solicitud con características, especificaciones y requisitos mínimos de admisibilidad.</li>
+              <li>Aclara o completa la información técnica cuando Compras lo consulte.</li>
+              <li>Responde las consultas técnicas.</li>
+              <li>Analiza técnicamente las ofertas y elabora el informe técnico con su recomendación.</li>
+            </ul>
+          </div>
+          <div class="split__col split__col--compras">
+            <h3>Qué hace Compras</h3>
+            <ul>
+              <li>Orienta para estructurar la solicitud y la documentación.</li>
+              <li>Revisa que la solicitud esté completa.</li>
+              <li>Registra el trámite en SAP y en el expediente electrónico.</li>
+              <li>Gestiona la disponibilidad presupuestal, la publicación y las comunicaciones.</li>
+              <li>Realiza la evaluación administrativa y económica, genera el pedido de adjudicación, notifica y archiva.</li>
+            </ul>
+          </div>
+        </div>
+
+        <h3>Etapas</h3>
+        <ol class="stages">
+          <li><span class="s-n">Actividades 1 y 2</span>Solicitud</li>
+          <li><span class="s-n">Actividades 3 a 6</span>Registro y preparación</li>
+          <li><span class="s-n">Actividades 7 a 9</span>Publicación</li>
+          <li><span class="s-n">Actividades 10 a 12</span>Evaluación</li>
+          <li><span class="s-n">Actividades 13 y 14</span>Adjudicación y cierre</li>
+        </ol>
+
+        <details>
+          <summary>Ver las 14 actividades y sus responsables</summary>
+          <div class="details-body">
+            <p class="legend"><span>Responsables:</span> <span class="actor actor--dep">Dependencia solicitante</span> <span class="actor actor--compras">Gerencia/Compras</span></p>
+          <div class="stage-block">
+            <h4>Etapa 1. Solicitud</h4>
+            <ol class="acts">
+            <li><span class="act-n" aria-hidden="true">1</span><span class="act-who"><span class="visually-hidden">Actividad 1. Responsable: </span><span class="actor actor--dep">Dependencia solicitante</span></span><div class="act-text"><p>Define la necesidad y el objeto de la compra. Presenta la solicitud de compra con:</p><ul><li>justificación de la necesidad;</li><li>cantidades requeridas;</li><li>plazo estimado de utilización o ejecución;</li><li>disponibilidad presupuestal, cuando corresponda;</li><li>prioridad de la contratación.</li></ul><p>Adjunta la documentación técnica (puede contar con la orientación de Compras para estructurarla) e indica, si corresponde, el referente técnico designado.</p><span class="act-rec">Registro: solicitud de compra; documentación técnica</span></div></li>
+            <li><span class="act-n" aria-hidden="true">2</span><span class="act-who"><span class="visually-hidden">Actividad 2. Responsable: </span><span class="actor actor--compras">Gerencia/Compras</span></span><div class="act-text"><p>Revisa que la solicitud esté completa e incluya la documentación técnica. Es una revisión formal, no técnica. Si falta algo, la devuelve para completarla (vuelve a la actividad 1).</p><span class="act-rec">Registro: devolución, si corresponde</span></div></li>
+            </ol>
+          </div>
+          <div class="stage-block">
+            <h4>Etapa 2. Registro y preparación</h4>
+            <ol class="acts">
+            <li><span class="act-n" aria-hidden="true">3</span><span class="act-who"><span class="visually-hidden">Actividad 3. Responsable: </span><span class="actor actor--compras">Gerencia/Compras</span></span><div class="act-text"><p>Carga la Solicitud de Pedido en SAP.</p><span class="act-rec">Registro: SAP</span></div></li>
+            <li><span class="act-n" aria-hidden="true">4</span><span class="act-who"><span class="visually-hidden">Actividad 4. Responsable: </span><span class="actor actor--compras">Gerencia/Compras</span></span><div class="act-text"><p>Registra la solicitud en la planilla de seguimiento y gestiona la disponibilidad presupuestal.</p><span class="act-rec">Registro: planilla; SAP</span></div></li>
+            <li><span class="act-n" aria-hidden="true">5</span><span class="act-who"><span class="visually-hidden">Actividad 5. Responsable: </span><span class="actor actor--compras">Gerencia/Compras</span></span><div class="act-text"><p>Con la Solicitud de Pedido grabada y aprobada, la remite a la Unidad U5881.</p><span class="act-rec">Registro: SAP</span></div></li>
+            <li><span class="act-n" aria-hidden="true">6</span><span class="act-who"><span class="visually-hidden">Actividad 6. Responsable: </span><span class="actor actor--compras">Gerencia/Compras</span></span><div class="act-text"><p>Prepara la publicación a partir de la documentación técnica recibida, respetando su contenido. Si surgen dudas u omisiones técnicas, las consulta con el referente técnico.</p><span class="act-rec">Registro: archivo de especificaciones para publicación</span></div></li>
+            </ol>
+          </div>
+          <div class="stage-block">
+            <h4>Etapa 3. Publicación</h4>
+            <ol class="acts">
+            <li><span class="act-n" aria-hidden="true">7</span><span class="act-who"><span class="visually-hidden">Actividad 7. Responsable: </span><span class="actor actor--compras">Gerencia/Compras</span></span><div class="act-text"><p>Publica la compra por un plazo no inferior a tres días y emite el expediente solicitando ofertas. Responde las consultas administrativas y deriva las técnicas al referente técnico.</p><span class="act-rec">Registro: publicación; expediente</span></div></li>
+            <li><span class="act-n" aria-hidden="true">8</span><span class="act-who"><span class="visually-hidden">Actividad 8. Responsable: </span><span class="actor actor--dep">Dependencia solicitante</span></span><div class="act-text"><p>Si hay consultas técnicas, las responde a tiempo para que Compras las comunique dentro del plazo de publicación.</p><span class="act-rec">Registro: respuesta a consultas</span></div></li>
+            <li><span class="act-n" aria-hidden="true">9</span><span class="act-who"><span class="visually-hidden">Actividad 9. Responsable: </span><span class="actor actor--compras">Gerencia/Compras</span></span><div class="act-text"><p>Recibe e ingresa las ofertas y envía el expediente al referente técnico.</p><span class="act-rec">Registro: expediente; ofertas</span></div></li>
+            </ol>
+          </div>
+          <div class="stage-block">
+            <h4>Etapa 4. Evaluación</h4>
+            <ol class="acts">
+            <li><span class="act-n" aria-hidden="true">10</span><span class="act-who"><span class="visually-hidden">Actividad 10. Responsable: </span><span class="actor actor--dep">Dependencia solicitante</span></span><div class="act-text"><p>Evalúa técnicamente las ofertas y elabora el informe técnico, que incluye:</p><ul><li>verificación del cumplimiento de las especificaciones técnicas;</li><li>análisis comparativo de las ofertas;</li><li>fundamentos técnicos de aceptación o rechazo;</li><li>conclusión y recomendación técnica.</li></ul><p>Envía el informe a Compras.</p><span class="act-rec">Registro: informe técnico</span></div></li>
+            <li><span class="act-n" aria-hidden="true">11</span><span class="act-who"><span class="visually-hidden">Actividad 11. Responsable: </span><span class="actor actor--compras">Gerencia/Compras</span></span><div class="act-text"><p>Revisa que el informe tenga los contenidos mínimos; si falta algo, lo devuelve para completarlo (vuelve a la actividad 10). Las conclusiones técnicas son las del informe.</p><span class="act-rec">Registro: expediente</span></div></li>
+            <li><span class="act-n" aria-hidden="true">12</span><span class="act-who"><span class="visually-hidden">Actividad 12. Responsable: </span><span class="actor actor--compras">Gerencia/Compras</span></span><div class="act-text"><p>Con base en el informe técnico, realiza la evaluación administrativa y económica, controla la documentación administrativa y registra el estudio de ofertas en SAP.</p><span class="act-rec">Registro: estudio de ofertas (SAP)</span></div></li>
+            </ol>
+          </div>
+          <div class="stage-block">
+            <h4>Etapa 5. Adjudicación y cierre</h4>
+            <ol class="acts">
+            <li><span class="act-n" aria-hidden="true">13</span><span class="act-who"><span class="visually-hidden">Actividad 13. Responsable: </span><span class="actor actor--compras">Gerencia/Compras</span></span><div class="act-text"><p>Genera el pedido de adjudicación en SAP, con las autorizaciones que correspondan según la normativa vigente, y notifica.</p><span class="act-rec">Registro: pedido de adjudicación; notificación</span></div></li>
+            <li><span class="act-n" aria-hidden="true">14</span><span class="act-who"><span class="visually-hidden">Actividad 14. Responsable: </span><span class="actor actor--compras">Gerencia/Compras</span></span><div class="act-text"><p>Archiva el expediente.</p><span class="act-rec">Registro: expediente</span></div></li>
+            </ol>
+          </div>
+            <p></p>
+          </div>
+        </details>
+        <details>
+          <summary>Ver flujograma del procedimiento</summary>
+          <div class="details-body">
+            <img src="./assets/img/flujograma-pr01.png" alt="Flujograma PR-01 en dos columnas, dependencia solicitante y Gerencia de Suministros y Contrataciones, con las 14 actividades agrupadas en cinco etapas. El detalle está en la lista de actividades." width="1920" height="2385" loading="lazy">
+          </div>
+        </details>
+
+        <div class="btn-row">
+          <a class="btn" data-doc="PR-01" href="./documentos/PR-01.pdf" target="_blank" rel="noopener">Ver PR-01 completo</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="pr02" aria-labelledby="pr02-titulo">
+      <div class="container">
+        <div class="proc-head"><span class="proc-code">PR-02</span><h2 id="pr02-titulo">Compra centralizada</h2></div>
+        <p class="section-lead">Se aplica a las compras centralizadas de bienes, repuestos, insumos, equipamiento y servicios que se tramitan con la intervención de la Unidad U5320. La dependencia solicitante mantiene toda la intervención técnica, incluida la validación del contenido técnico del pliego.</p>
+        <dl class="facts">
+          <div><dt>Comienza con</dt><dd>La solicitud de compra de la dependencia, con su documentación técnica.</dd></div>
+          <div><dt>Termina con</dt><dd>El pedido de adjudicación notificado y el expediente archivado.</dd></div>
+          <div><dt>Registro oficial</dt><dd>SAP y expediente electrónico.</dd></div>
+        </dl>
+
+        <div class="split split--3">
+          <div class="split__col">
+            <h3>Qué aporta tu dependencia</h3>
+            <ul>
+              <li>Explica la necesidad y define el objeto y las cantidades.</li>
+              <li>Presenta la solicitud con la documentación técnica.</li>
+              <li>Revisa, completa y valida el contenido técnico del pliego.</li>
+              <li>Responde las consultas técnicas.</li>
+              <li>Analiza técnicamente las ofertas y elabora el informe técnico.</li>
+            </ul>
+          </div>
+          <div class="split__col split__col--compras">
+            <h3>Qué hace Compras</h3>
+            <ul>
+              <li>Orienta y revisa que la solicitud esté completa.</li>
+              <li>Registra en SAP y gestiona la disponibilidad presupuestal y las autorizaciones.</li>
+              <li>Arma el expediente y lo remite a la Unidad U5320.</li>
+              <li>Coordina con U5320 y con la dependencia el pliego, las consultas y la evaluación.</li>
+              <li>Revisa que el informe técnico esté completo y archiva el expediente.</li>
+            </ul>
+          </div>
+          <div class="split__col split__col--u5320">
+            <h3>Qué hace la Unidad U5320</h3>
+            <ul>
+              <li>Asigna el escribano que elabora el borrador del pliego.</li>
+              <li>Confecciona el pliego definitivo con el contenido técnico validado.</li>
+              <li>Publica la compra e invita a proveedores.</li>
+              <li>Realiza la evaluación administrativa y económica, crea el pedido de adjudicación y notifica.</li>
+            </ul>
+          </div>
+        </div>
+
+        <h3>Etapas</h3>
+        <ol class="stages">
+          <li><span class="s-n">Actividades 1 y 2</span>Solicitud</li>
+          <li><span class="s-n">Actividades 3 a 6</span>Registro en SAP</li>
+          <li><span class="s-n">Actividades 7 a 11</span>Pliego de condiciones</li>
+          <li><span class="s-n">Actividades 12 y 13</span>Publicación</li>
+          <li><span class="s-n">Actividades 14 a 17</span>Evaluación y adjudicación</li>
+          <li><span class="s-n">Actividad 18</span>Cierre</li>
+        </ol>
+
+        <div class="notice">
+          <span class="notice__label">Para tener en cuenta</span>
+          <p>El pliego también tiene contenido técnico: lo revisa y valida el referente técnico de la dependencia antes de que se confeccione el pliego definitivo. La asignación del escribano es previa a la confección del pliego.</p>
+        </div>
+
+        <details>
+          <summary>Ver las 18 actividades y sus responsables</summary>
+          <div class="details-body">
+          <p class="legend"><span>Responsables:</span> <span class="actor actor--dep">Dependencia solicitante</span> <span class="actor actor--compras">Gerencia/Compras</span> <span class="actor actor--u5320">Unidad U5320</span></p>
+          <div class="stage-block">
+            <h4>Etapa 1. Solicitud</h4>
+            <ol class="acts">
+            <li><span class="act-n" aria-hidden="true">1</span><span class="act-who"><span class="visually-hidden">Actividad 1. Responsable: </span><span class="actor actor--dep">Dependencia solicitante</span></span><div class="act-text"><p>Define la necesidad y el objeto de la compra. Presenta la solicitud de compra con:</p><ul><li>justificación de la necesidad;</li><li>cantidades requeridas;</li><li>plazo estimado de utilización o ejecución;</li><li>disponibilidad presupuestal, cuando corresponda;</li><li>prioridad de la contratación.</li></ul><p>Adjunta la documentación técnica (puede contar con la orientación de Compras para estructurarla) e indica, si corresponde, el referente técnico designado.</p><span class="act-rec">Registro: solicitud de compra; documentación técnica</span></div></li>
+            <li><span class="act-n" aria-hidden="true">2</span><span class="act-who"><span class="visually-hidden">Actividad 2. Responsable: </span><span class="actor actor--compras">Gerencia/Compras</span></span><div class="act-text"><p>Revisa que la solicitud esté completa e incluya la documentación técnica. Es una revisión formal, no técnica. Si falta algo, la devuelve para completarla (vuelve a la actividad 1).</p><span class="act-rec">Registro: devolución, si corresponde</span></div></li>
+            </ol>
+          </div>
+          <div class="stage-block">
+            <h4>Etapa 2. Registro en SAP</h4>
+            <ol class="acts">
+            <li><span class="act-n" aria-hidden="true">3</span><span class="act-who"><span class="visually-hidden">Actividad 3. Responsable: </span><span class="actor actor--compras">Gerencia/Compras</span></span><div class="act-text"><p>Ingresa la Solicitud de Pedido en SAP, que genera su número.</p><span class="act-rec">Registro: SAP</span></div></li>
+            <li><span class="act-n" aria-hidden="true">4</span><span class="act-who"><span class="visually-hidden">Actividad 4. Responsable: </span><span class="actor actor--compras">Gerencia/Compras</span></span><div class="act-text"><p>Registra la solicitud en la planilla de seguimiento y gestiona la disponibilidad presupuestal.</p><span class="act-rec">Registro: planilla; SAP</span></div></li>
+            <li><span class="act-n" aria-hidden="true">5</span><span class="act-who"><span class="visually-hidden">Actividad 5. Responsable: </span><span class="actor actor--compras">Gerencia/Compras</span></span><div class="act-text"><p>Con la Solicitud de Pedido grabada, recibe las autorizaciones correspondientes.</p><span class="act-rec">Registro: autorizaciones (SAP)</span></div></li>
+            <li><span class="act-n" aria-hidden="true">6</span><span class="act-who"><span class="visually-hidden">Actividad 6. Responsable: </span><span class="actor actor--compras">Gerencia/Compras</span></span><div class="act-text"><p>Arma el expediente electrónico con la documentación técnica recibida y la captura de las autorizaciones de SAP.</p><span class="act-rec">Registro: expediente</span></div></li>
+            </ol>
+          </div>
+          <div class="stage-block" id="pr02-etapas">
+            <h4>Etapa 3. Pliego de condiciones</h4>
+            <ol class="acts">
+            <li><span class="act-n" aria-hidden="true">7</span><span class="act-who"><span class="visually-hidden">Actividad 7. Responsable: </span><span class="actor actor--compras">Gerencia/Compras</span></span><div class="act-text"><p>Remite el expediente a la Unidad U5320.</p><span class="act-rec">Registro: expediente</span></div></li>
+            <li><span class="act-n" aria-hidden="true">8</span><span class="act-who"><span class="visually-hidden">Actividad 8. Responsable: </span><span class="actor actor--u5320">Unidad U5320</span></span><div class="act-text"><p>Asigna el escribano, que elabora el borrador del pliego.</p><span class="act-rec">Registro: borrador del pliego</span></div></li>
+            <li><span class="act-n" aria-hidden="true">9</span><span class="act-who"><span class="visually-hidden">Actividad 9. Responsable: </span><span class="actor actor--compras">Gerencia/Compras</span></span><div class="act-text"><p>Recibe el borrador y lo envía al referente técnico.</p><span class="act-rec">Registro: expediente</span></div></li>
+            <li><span class="act-n" aria-hidden="true">10</span><span class="act-who"><span class="visually-hidden">Actividad 10. Responsable: </span><span class="actor actor--dep">Dependencia solicitante</span></span><div class="act-text"><p>Revisa, completa y valida el contenido técnico del pliego (objeto, especificaciones y requisitos mínimos de admisibilidad) y lo devuelve para la confección del pliego definitivo.</p><span class="act-rec">Registro: contenido técnico validado</span></div></li>
+            <li><span class="act-n" aria-hidden="true">11</span><span class="act-who"><span class="visually-hidden">Actividad 11. Responsable: </span><span class="actor actor--u5320">Unidad U5320</span></span><div class="act-text"><p>Confecciona el pliego definitivo con el contenido técnico validado, en coordinación con Compras en los aspectos administrativos.</p><span class="act-rec">Registro: pliego de condiciones</span></div></li>
+            </ol>
+          </div>
+          <div class="stage-block">
+            <h4>Etapa 4. Publicación</h4>
+            <ol class="acts">
+            <li><span class="act-n" aria-hidden="true">12</span><span class="act-who"><span class="visually-hidden">Actividad 12. Responsable: </span><span class="actor actor--u5320">Unidad U5320</span></span><div class="act-text"><p>Publica la compra por el plazo que corresponda e invita a proveedores. Las consultas técnicas se derivan al referente técnico.</p><span class="act-rec">Registro: publicación; invitaciones</span></div></li>
+            <li><span class="act-n" aria-hidden="true">13</span><span class="act-who"><span class="visually-hidden">Actividad 13. Responsable: </span><span class="actor actor--dep">Dependencia solicitante</span></span><div class="act-text"><p>Si hay consultas técnicas, las responde a tiempo para que se comuniquen dentro del plazo de publicación.</p><span class="act-rec">Registro: respuesta a consultas</span></div></li>
+            </ol>
+          </div>
+          <div class="stage-block">
+            <h4>Etapa 5. Evaluación y adjudicación</h4>
+            <ol class="acts">
+            <li><span class="act-n" aria-hidden="true">14</span><span class="act-who"><span class="visually-hidden">Actividad 14. Responsable: </span><span class="actor actor--compras">Gerencia/Compras</span></span><div class="act-text"><p>Recibe las ofertas y las envía al referente técnico.</p><span class="act-rec">Registro: expediente; ofertas</span></div></li>
+            <li><span class="act-n" aria-hidden="true">15</span><span class="act-who"><span class="visually-hidden">Actividad 15. Responsable: </span><span class="actor actor--dep">Dependencia solicitante</span></span><div class="act-text"><p>Evalúa técnicamente las ofertas y elabora el informe técnico, que incluye:</p><ul><li>verificación del cumplimiento de las especificaciones técnicas;</li><li>análisis comparativo de las ofertas;</li><li>fundamentos técnicos de aceptación o rechazo;</li><li>conclusión y recomendación técnica.</li></ul><p>Envía el informe a Compras.</p><span class="act-rec">Registro: informe técnico</span></div></li>
+            <li><span class="act-n" aria-hidden="true">16</span><span class="act-who"><span class="visually-hidden">Actividad 16. Responsable: </span><span class="actor actor--compras">Gerencia/Compras</span></span><div class="act-text"><p>Revisa que el informe tenga los contenidos mínimos; si falta algo, lo devuelve para completarlo (vuelve a la actividad 15). Si está completo, lo incorpora al expediente y lo remite a la Unidad U5320. Las conclusiones técnicas son las del informe.</p><span class="act-rec">Registro: expediente con informe técnico</span></div></li>
+            <li><span class="act-n" aria-hidden="true">17</span><span class="act-who"><span class="visually-hidden">Actividad 17. Responsable: </span><span class="actor actor--u5320">Unidad U5320</span></span><div class="act-text"><p>Con base en el informe técnico, realiza la evaluación administrativa y económica, crea el pedido de adjudicación con las autorizaciones que correspondan según la normativa vigente y notifica.</p><span class="act-rec">Registro: pedido de adjudicación; notificación</span></div></li>
+            </ol>
+          </div>
+          <div class="stage-block">
+            <h4>Etapa 6. Cierre</h4>
+            <ol class="acts">
+            <li><span class="act-n" aria-hidden="true">18</span><span class="act-who"><span class="visually-hidden">Actividad 18. Responsable: </span><span class="actor actor--compras">Gerencia/Compras</span></span><div class="act-text"><p>Recibe el expediente y lo archiva.</p><span class="act-rec">Registro: expediente</span></div></li>
+            </ol>
+          </div>
+            <p></p>
+          </div>
+        </details>
+        <details>
+          <summary>Ver flujograma del procedimiento</summary>
+          <div class="details-body">
+            <img src="./assets/img/flujograma-pr02-parte1.png" alt="Flujograma PR-02, parte 1: solicitud, registro en SAP y pliego de condiciones (actividades 1 a 11), en tres columnas: dependencia solicitante, Gerencia de Suministros y Contrataciones y Unidad U5320." width="1920" height="2070" loading="lazy">
+            <img src="./assets/img/flujograma-pr02-parte2.png" alt="Flujograma PR-02, parte 2: publicación, evaluación, adjudicación y cierre (actividades 12 a 18). El detalle está en la lista de actividades." width="1920" height="1470" loading="lazy">
+          </div>
+        </details>
+
+        <div class="btn-row">
+          <a class="btn" data-doc="PR-02" href="./documentos/PR-02.pdf" target="_blank" rel="noopener">Ver PR-02 completo</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--band" id="despues" aria-labelledby="despues-titulo">
+      <div class="container">
+        <h2 id="despues-titulo">Después de la adjudicación</h2>
+        <p class="section-lead">La ejecución y la recepción no forman parte de PR-01 ni de PR-02, pero conviene tener presente quién interviene (Protocolo, numerales 10, 11 y 12).</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th scope="col">Quién</th><th scope="col">Qué hace</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Dependencia solicitante / referente técnico</th><td>Acompaña técnicamente la ejecución, verifica técnicamente lo recibido y emite la conformidad técnica.</td></tr>
+              <tr><th scope="row">Unidad Almacén y Despacho</th><td>Controla que las cantidades recibidas coincidan con lo comprado.</td></tr>
+              <tr><th scope="row">Área competente</th><td>Realiza la recepción administrativa, una vez emitida la conformidad técnica.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="measure">Si lo contratado es un servicio con pedido SAP, su utilización sigue el <a href="./servicios.html">procedimiento PR-03</a>.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <div class="footer-units">
+        <span class="u-dept">Departamento de Desarrollo Ambiental</span>
+        <span>División Limpieza y Gestión de Residuos</span>
+        <span>Gerencia de Suministros y Contrataciones</span>
+      </div>
+      <div class="footer-meta">
+        <p><strong>Portal Operativo de Compras · <span data-cfg="version">V0.1</span></strong></p>
+        <p><em data-cfg="aviso">Contenido en proceso de actualización y mejora.</em></p>
+        <p><a data-cfg-mail="" href="mailto:comprasyalmacenes.suministros@imm.gub.uy"><span data-cfg="correo">comprasyalmacenes.suministros@imm.gub.uy</span></a></p>
+        <p><a href="./index.html#sobre">Sobre este portal</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./js/app.js"></script>
+</body>
+</html>

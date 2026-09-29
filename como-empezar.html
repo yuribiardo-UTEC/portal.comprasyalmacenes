@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es-UY">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cómo empezar · Portal Operativo de Compras</title>
+  <meta name="description" content="Qué información preparar y cómo presentar una solicitud de compra.">
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Ir al contenido</a>
+
+  <header class="inst-header">
+    <div class="container inst-header__inner">
+      <div class="inst-brand">
+        <!-- EDITAR AQUÍ: logotipo institucional. Reemplazar el archivo assets/img/logo-im.png manteniendo el nombre. -->
+        <a href="./index.html" aria-label="Portal Operativo de Compras, inicio">
+          <img class="inst-logo" src="./assets/img/logo-im.png" alt="Intendencia de Montevideo" width="190" height="52">
+        </a>
+        <div class="inst-units">
+          <strong class="u-dept">Departamento de Desarrollo Ambiental</strong>
+          <strong>División Limpieza y Gestión de Residuos</strong>
+          <span>Gerencia de Suministros y Contrataciones</span>
+        </div>
+      </div>
+      <div class="portal-id">
+        <a class="portal-id__name" href="./index.html">Portal Operativo de Compras</a>
+        <span class="portal-id__sub">Mantenimiento</span>
+        <!-- La versión y el estado se editan en js/app.js (CONFIG) -->
+        <span class="version-tag"><span data-cfg="version">V0.1</span> · <span data-cfg="estado">Portal en desarrollo</span></span>
+      </div>
+    </div>
+    <hr class="inst-rule">
+  </header>
+
+  <nav class="site-nav" aria-label="Navegación principal">
+    <div class="container site-nav__inner">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-list">
+        <span class="nav-toggle__bars" aria-hidden="true"></span> Menú
+      </button>
+      <ul class="nav-list" id="nav-list">
+          <li><a href="./index.html">Inicio</a></li>
+          <li><a href="./como-empezar.html" aria-current="page">Cómo empezar</a></li>
+          <li><a href="./procedimientos.html">Procedimientos</a></li>
+          <li><a href="./servicios.html">Servicios contratados</a></li>
+          <li><a href="./documentos.html">Documentos</a></li>
+          <li><a href="./preguntas.html">Preguntas frecuentes</a></li>
+          <li><a href="./preguntas.html#contacto">Contacto</a></li>
+      </ul>
+      <form class="search" id="search-form" role="search" autocomplete="off">
+        <label for="search-input">Buscar en el portal</label>
+        <input id="search-input" type="search" placeholder="Buscar en el portal..." aria-controls="search-results" aria-expanded="false">
+        <ul class="search-results" id="search-results" hidden aria-live="polite"></ul>
+      </form>
+    </div>
+  </nav>
+
+  <main id="contenido" tabindex="-1">
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Ruta de navegación">
+        <ol><li><a href="./index.html">Inicio</a></li><li aria-current="page">Cómo empezar</li></ol>
+      </nav>
+    </div>
+    <div class="container page-head">
+      <h1>¿Necesitás iniciar una compra?</h1>
+      <p>Antes de iniciar el trámite necesitamos entender claramente qué necesita tu dependencia.</p>
+    </div>
+
+    <section class="section" aria-labelledby="pasos">
+      <div class="container">
+        <h2 id="pasos">Cinco pasos para preparar tu solicitud</h2>
+        <ol class="steps">
+          <li>
+            <h3>Definí la necesidad</h3>
+            <p>¿Qué se necesita comprar o contratar y para qué? La solicitud incluye la justificación de la necesidad y define el objeto de la compra.</p>
+          </li>
+          <li>
+            <h3>Definí cantidades</h3>
+            <p>Indicá las cantidades requeridas cuando corresponda.</p>
+          </li>
+          <li id="documentacion-tecnica">
+            <h3>Prepará la información técnica</h3>
+            <p>Características, especificaciones, requisitos mínimos de admisibilidad y demás información necesaria para definir correctamente lo solicitado. Según la naturaleza de la compra, puede consistir en:</p>
+            <ul>
+              <li>términos de referencia o memoria descriptiva;</li>
+              <li>pliego de condiciones particulares o especificaciones técnicas;</li>
+              <li>planos, anexos técnicos o cronogramas;</li>
+              <li>cualquier otra documentación necesaria para definir el objeto.</li>
+            </ul>
+            <p>Compras puede orientarte sobre cómo estructurarla. Para servicios, hay un <a href="./documentos.html">modelo de Requisitos y Especificaciones Técnicas</a>.</p>
+          </li>
+          <li>
+            <h3>Indicá cuándo lo necesitás</h3>
+            <p>Plazo estimado de utilización o ejecución y prioridad de la contratación. Incluí la disponibilidad presupuestal cuando corresponda.</p>
+          </li>
+          <li>
+            <h3>Enviá la solicitud</h3>
+            <p>Compras revisará la información y te orientará si es necesario completar o ajustar algo antes de iniciar el procedimiento. Si corresponde, indicá quién será el referente técnico designado.</p>
+          </li>
+        </ol>
+
+        <div class="notice">
+          <span class="notice__label">Importante</span>
+          <p>No necesitás conocer el procedimiento de compra para realizar una solicitud.</p>
+          <p>La dependencia aporta el conocimiento técnico sobre lo que necesita y Compras la orienta y conduce la tramitación administrativa.</p>
+        </div>
+
+        <div class="btn-row">
+          <a class="btn" href="./documentos.html">Consultar documentación necesaria</a>
+          <a class="btn btn--secondary" data-cfg-mail="Consulta para iniciar una compra" href="mailto:comprasyalmacenes.suministros@imm.gub.uy">Escribir a Compras</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--band" id="contenido-solicitud" aria-labelledby="contenido-titulo">
+      <div class="container">
+        <h2 id="contenido-titulo">Qué debe contener la solicitud</h2>
+        <p class="section-lead">Contenido mínimo que establece el Protocolo (numeral 5).</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th scope="col">Contenido</th><th scope="col">Qué indicar</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Justificación de la necesidad</th><td>Qué se necesita y para qué.</td></tr>
+              <tr><th scope="row">Cantidades requeridas</th><td>Cuánto se necesita.</td></tr>
+              <tr><th scope="row">Plazo estimado</th><td>Cuándo se prevé utilizarlo o ejecutarlo.</td></tr>
+              <tr><th scope="row">Disponibilidad presupuestal</th><td>Cuando corresponda.</td></tr>
+              <tr><th scope="row">Prioridad de la contratación</th><td>Nivel de prioridad de la compra.</td></tr>
+              <tr><th scope="row">Documentación técnica</th><td>La que define el objeto de la compra. Sin documentación técnica no se inicia el procedimiento.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="notice">
+          <span class="notice__label">Si falta algo</span>
+          <p>Compras hace una revisión formal, no técnica, de que la solicitud esté completa. Si falta algo, la devuelve para completarla y el trámite comienza cuando la solicitud está completa.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="quien-hace-que" aria-labelledby="quien-titulo">
+      <div class="container">
+        <h2 id="quien-titulo">Quién hace qué</h2>
+        <p class="section-lead">Cada compra reúne conocimientos complementarios. La dependencia puede acompañar el trámite directamente o mediante un referente técnico que designe.</p>
+        <div class="split">
+          <div class="split__col">
+            <h3>Dependencia solicitante</h3>
+            <ul>
+              <li>Identifica y explica la necesidad.</li>
+              <li>Aporta la información y documentación técnica.</li>
+              <li>Define las especificaciones y los requisitos mínimos de admisibilidad.</li>
+              <li>Responde consultas técnicas.</li>
+              <li>Participa en la evaluación técnica: analiza las ofertas y elabora el informe técnico.</li>
+              <li>Verifica técnicamente lo recibido o ejecutado.</li>
+              <li>Otorga la conformidad técnica cuando corresponda.</li>
+            </ul>
+          </div>
+          <div class="split__col split__col--compras">
+            <h3>Gerencia de Suministros y Contrataciones / Compras</h3>
+            <ul>
+              <li>Orienta a la dependencia para estructurar la solicitud y la documentación.</li>
+              <li>Revisa que la solicitud esté completa.</li>
+              <li>Conduce el procedimiento administrativo.</li>
+              <li>Realiza las actuaciones correspondientes en SAP y en el expediente.</li>
+              <li>Gestiona publicaciones y comunicaciones.</li>
+              <li>Coordina las distintas intervenciones y deriva las consultas técnicas al referente técnico.</li>
+              <li>Realiza los controles administrativos que correspondan.</li>
+            </ul>
+          </div>
+        </div>
+        <p class="measure">Compras respeta las especificaciones tal como las define la dependencia: no las modifica ni las interpreta. Si surge una duda u omisión técnica, la consulta con el referente técnico, que es quien la resuelve.</p>
+      </div>
+    </section>
+
+    <section class="section section--band" aria-labelledby="despues-solicitud">
+      <div class="container">
+        <h2 id="despues-solicitud">Después de enviar la solicitud</h2>
+        <p class="measure">Con la solicitud completa, se inicia el procedimiento. La Gerencia de Suministros y Contrataciones determinará el procedimiento administrativo que corresponda de acuerdo con las características de la contratación. Tanto en la compra descentralizada (PR-01) como en la centralizada (PR-02), tu dependencia mantiene la intervención técnica.</p>
+        <div class="btn-row">
+          <a class="btn btn--secondary" href="./procedimientos.html#pr01">Compra descentralizada</a>
+          <a class="btn btn--secondary" href="./procedimientos.html#pr02">Compra centralizada</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <div class="footer-units">
+        <span class="u-dept">Departamento de Desarrollo Ambiental</span>
+        <span>División Limpieza y Gestión de Residuos</span>
+        <span>Gerencia de Suministros y Contrataciones</span>
+      </div>
+      <div class="footer-meta">
+        <p><strong>Portal Operativo de Compras · <span data-cfg="version">V0.1</span></strong></p>
+        <p><em data-cfg="aviso">Contenido en proceso de actualización y mejora.</em></p>
+        <p><a data-cfg-mail="" href="mailto:comprasyalmacenes.suministros@imm.gub.uy"><span data-cfg="correo">comprasyalmacenes.suministros@imm.gub.uy</span></a></p>
+        <p><a href="./index.html#sobre">Sobre este portal</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./js/app.js"></script>
+</body>
+</html>

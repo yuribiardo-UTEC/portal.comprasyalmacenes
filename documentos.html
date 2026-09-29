@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es-UY">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Documentos · Portal Operativo de Compras</title>
+  <meta name="description" content="Procedimientos, documento marco y modelos de la Gerencia de Suministros y Contrataciones.">
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Ir al contenido</a>
+
+  <header class="inst-header">
+    <div class="container inst-header__inner">
+      <div class="inst-brand">
+        <!-- EDITAR AQUÍ: logotipo institucional. Reemplazar el archivo assets/img/logo-im.png manteniendo el nombre. -->
+        <a href="./index.html" aria-label="Portal Operativo de Compras, inicio">
+          <img class="inst-logo" src="./assets/img/logo-im.png" alt="Intendencia de Montevideo" width="190" height="52">
+        </a>
+        <div class="inst-units">
+          <strong class="u-dept">Departamento de Desarrollo Ambiental</strong>
+          <strong>División Limpieza y Gestión de Residuos</strong>
+          <span>Gerencia de Suministros y Contrataciones</span>
+        </div>
+      </div>
+      <div class="portal-id">
+        <a class="portal-id__name" href="./index.html">Portal Operativo de Compras</a>
+        <span class="portal-id__sub">Mantenimiento</span>
+        <!-- La versión y el estado se editan en js/app.js (CONFIG) -->
+        <span class="version-tag"><span data-cfg="version">V0.1</span> · <span data-cfg="estado">Portal en desarrollo</span></span>
+      </div>
+    </div>
+    <hr class="inst-rule">
+  </header>
+
+  <nav class="site-nav" aria-label="Navegación principal">
+    <div class="container site-nav__inner">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-list">
+        <span class="nav-toggle__bars" aria-hidden="true"></span> Menú
+      </button>
+      <ul class="nav-list" id="nav-list">
+          <li><a href="./index.html">Inicio</a></li>
+          <li><a href="./como-empezar.html">Cómo empezar</a></li>
+          <li><a href="./procedimientos.html">Procedimientos</a></li>
+          <li><a href="./servicios.html">Servicios contratados</a></li>
+          <li><a href="./documentos.html" aria-current="page">Documentos</a></li>
+          <li><a href="./preguntas.html">Preguntas frecuentes</a></li>
+          <li><a href="./preguntas.html#contacto">Contacto</a></li>
+      </ul>
+      <form class="search" id="search-form" role="search" autocomplete="off">
+        <label for="search-input">Buscar en el portal</label>
+        <input id="search-input" type="search" placeholder="Buscar en el portal..." aria-controls="search-results" aria-expanded="false">
+        <ul class="search-results" id="search-results" hidden aria-live="polite"></ul>
+      </form>
+    </div>
+  </nav>
+
+  <main id="contenido" tabindex="-1">
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Ruta de navegación">
+        <ol><li><a href="./index.html">Inicio</a></li><li aria-current="page">Documentos</li></ol>
+      </nav>
+    </div>
+    <div class="container page-head">
+      <h1>Documentos y modelos</h1>
+      <p>Los documentos oficiales son el respaldo de lo que se explica en este portal. Ante cualquier diferencia, prevalece el documento aprobado.</p>
+    </div>
+
+    <section class="section">
+      <div class="container">
+        <!-- EDITAR AQUÍ: la lista de documentos se genera desde CONFIG.documentos en js/app.js -->
+        <div id="doc-library"></div>
+        <noscript>
+          <ul>
+            <li><a href="./documentos/PR-01.pdf">PR-01 · Procedimiento de Compras Descentralizadas (PDF)</a></li>
+            <li><a href="./documentos/PR-02.pdf">PR-02 · Procedimiento de Compras Centralizadas (PDF)</a></li>
+            <li><a href="./documentos/PR-03.pdf">PR-03 · Utilización de Servicios Contratados por Pedido SAP (PDF)</a></li>
+            <li><a href="./documentos/protocolo.pdf">Protocolo de Actuación de Almacenes y Compras de Servicios Generales (PDF)</a></li>
+            <li><a href="./documentos/RET-Servicios.docx">Modelo de Requisitos y Especificaciones Técnicas · Servicios (Word)</a></li>
+          </ul>
+        </noscript>
+        <p class="measure" style="margin-top:2rem;color:var(--muted)">Esta biblioteca se ampliará a medida que se aprueben nuevos procedimientos, plantillas, listas de verificación y modelos de informe.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <div class="footer-units">
+        <span class="u-dept">Departamento de Desarrollo Ambiental</span>
+        <span>División Limpieza y Gestión de Residuos</span>
+        <span>Gerencia de Suministros y Contrataciones</span>
+      </div>
+      <div class="footer-meta">
+        <p><strong>Portal Operativo de Compras · <span data-cfg="version">V0.1</span></strong></p>
+        <p><em data-cfg="aviso">Contenido en proceso de actualización y mejora.</em></p>
+        <p><a data-cfg-mail="" href="mailto:comprasyalmacenes.suministros@imm.gub.uy"><span data-cfg="correo">comprasyalmacenes.suministros@imm.gub.uy</span></a></p>
+        <p><a href="./index.html#sobre">Sobre este portal</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./js/app.js"></script>
+</body>
+</html>
