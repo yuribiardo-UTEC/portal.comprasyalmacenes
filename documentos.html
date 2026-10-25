@@ -3,103 +3,148 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Documentos · Portal Operativo de Compras</title>
-  <meta name="description" content="Procedimientos, documento marco y modelos de la Gerencia de Suministros y Contrataciones.">
-  <link rel="stylesheet" href="./styles.css">
+  <title>Modelos y documentos · Portal Operativo de Compras</title>
+  <meta name="description" content="Modelos Word editables y documentos PDF de los procedimientos de compra.">
+  <link rel="icon" href="assets/img/logo-im.png">
+  <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
   <a class="skip-link" href="#contenido">Ir al contenido</a>
 
-  <header class="inst-header">
-    <div class="container inst-header__inner">
-      <div class="inst-brand">
-        <!-- EDITAR AQUÍ: logotipo institucional. Reemplazar el archivo assets/img/logo-im.png manteniendo el nombre. -->
-        <a href="./index.html" aria-label="Portal Operativo de Compras, inicio">
-          <img class="inst-logo" src="./logo-im.png" alt="Intendencia de Montevideo" width="190" height="52">
-        </a>
-        <div class="inst-units">
-          <strong class="u-dept">Departamento de Desarrollo Ambiental</strong>
-          <strong>División Limpieza y Gestión de Residuos</strong>
-          <span>Gerencia de Suministros y Contrataciones</span>
-        </div>
+  <header class="top">
+    <div class="top__inner">
+      <!-- EDITAR AQUÍ: logotipo institucional. Reemplazar assets/img/logo-im.png manteniendo el nombre. -->
+      <a class="top__logo" href="index.html"><img src="assets/img/logo-im.png" alt="Intendencia de Montevideo" width="640" height="175"></a>
+      <span class="top__sep" aria-hidden="true"></span>
+      <div class="top__id">
+        <a class="top__name" href="index.html">Portal Operativo de Compras</a>
+        <span class="top__sub">Mantenimiento · División Limpieza y Gestión de Residuos</span>
       </div>
-      <div class="portal-id">
-        <a class="portal-id__name" href="./index.html">Portal Operativo de Compras</a>
-        <span class="portal-id__sub">Mantenimiento</span>
-        <!-- La versión y el estado se editan en js/app.js (CONFIG) -->
-        <span class="version-tag"><span data-cfg="version">V0.1</span> · <span data-cfg="estado">Portal en desarrollo</span></span>
-      </div>
+      <span class="top__tag">Portal interno · <span data-cfg="version">V2</span></span>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu"><span class="nav-toggle__bars" aria-hidden="true"></span>Menú</button>
     </div>
-    <hr class="inst-rule">
   </header>
 
-  <nav class="site-nav" aria-label="Navegación principal">
-    <div class="container site-nav__inner">
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-list">
-        <span class="nav-toggle__bars" aria-hidden="true"></span> Menú
-      </button>
-      <ul class="nav-list" id="nav-list">
-          <li><a href="./index.html">Inicio</a></li>
-          <li><a href="./como-empezar.html">Cómo empezar</a></li>
-          <li><a href="./procedimientos.html">Procedimientos</a></li>
-          <li><a href="./servicios.html">Servicios contratados</a></li>
-          <li><a href="./documentos.html" aria-current="page">Documentos</a></li>
-          <li><a href="./preguntas.html">Preguntas frecuentes</a></li>
-          <li><a href="./preguntas.html#contacto">Contacto</a></li>
-      </ul>
-      <form class="search" id="search-form" role="search" autocomplete="off">
+  <div class="layout">
+    <aside class="side" id="menu" aria-label="Menú del portal">
+      <form class="search" id="search-form" role="search" autocomplete="off" hidden>
         <label for="search-input">Buscar en el portal</label>
-        <input id="search-input" type="search" placeholder="Buscar en el portal..." aria-controls="search-results" aria-expanded="false">
+        <input id="search-input" type="search" placeholder="Buscar en el portal…" aria-controls="search-results" aria-expanded="false">
         <ul class="search-results" id="search-results" hidden aria-live="polite"></ul>
       </form>
-    </div>
-  </nav>
-
-  <main id="contenido" tabindex="-1">
-    <div class="container">
-      <nav class="breadcrumbs" aria-label="Ruta de navegación">
-        <ol><li><a href="./index.html">Inicio</a></li><li aria-current="page">Documentos</li></ol>
+      <nav class="side-nav" aria-label="Navegación principal">
+        <p class="side__label">Navegación</p>
+        <ul><li><a href="index.html"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg><span>Inicio</span></a></li><li><a href="procedimientos.html"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M8 8h8M8 12h8M8 16h5"/></svg><span>Procedimientos</span></a></li><li><a href="servicios.html"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="16" rx="1"/><path d="M3 9h18M9 9v11M15 9v11"/></svg><span>Servicios contratados</span></a></li><li><a href="documentos.html" aria-current="page"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M14 3H6v18h12V7z"/><path d="M14 3v4h4"/><path d="M12 11v6M9 14l3 3 3-3"/></svg><span>Modelos y documentos</span></a></li><li><a href="seguimiento.html"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Seguimiento</span><span class="pill pill--soon">Próximamente</span></a></li></ul>
       </nav>
-    </div>
-    <div class="container page-head">
-      <h1>Documentos y modelos</h1>
-      <p>Los documentos oficiales son el respaldo de lo que se explica en este portal. Ante cualquier diferencia, prevalece el documento aprobado.</p>
-    </div>
+      <nav class="side-nav side-nav--sec" aria-label="Ayuda">
+        <p class="side__label">Ayuda</p>
+        <ul><li><a href="como-empezar.html"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg><span>Cómo empezar una solicitud</span></a></li><li><a href="preguntas.html"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.6V14"/><path d="M12 17.5v.01"/></svg><span>Preguntas frecuentes y contacto</span></a></li></ul>
+      </nav>
+      <div class="side__shared">
+        <p class="side__label" style="margin-left:0">Trabajo compartido</p>
+        <strong>Mantenimiento</strong>
+        <p>Conoce la necesidad y aporta lo técnico.</p>
+        <strong>Compras</strong>
+        <p>Orienta y conduce el procedimiento.</p>
+      </div>
+      <div class="side__note"><strong>La normativa y SAP</strong>son la referencia oficial. Este portal orienta.</div>
+    </aside>
 
-    <section class="section">
-      <div class="container">
-        <!-- EDITAR AQUÍ: la lista de documentos se genera desde CONFIG.documentos en js/app.js -->
-        <div id="doc-library"></div>
-        <noscript>
-          <ul>
-            <li><a href="./PR-01.pdf">PR-01 · Procedimiento de Compras Descentralizadas (PDF)</a></li>
-            <li><a href="./PR-02.pdf">PR-02 · Procedimiento de Compras Centralizadas (PDF)</a></li>
-            <li><a href="./PR-03.pdf">PR-03 · Utilización de Servicios Contratados por Pedido SAP (PDF)</a></li>
-            <li><a href="./protocolo.pdf">Protocolo de Actuación de Almacenes y Compras de Servicios Generales (PDF)</a></li>
-            <li><a href="./RET-Servicios.docx">Modelo de Requisitos y Especificaciones Técnicas · Servicios (Word)</a></li>
+    <main id="contenido" tabindex="-1">
+      <div class="wrap">
+        <nav aria-label="Ruta de navegación"><ol class="crumbs"><li><a href="index.html">Inicio</a></li><li aria-current="page">Modelos y documentos</li></ol></nav>
+        <header class="page-head">
+          <span class="eyebrow">Modelos y documentos</span>
+          <h1>Modelos editables y documentos de referencia</h1>
+          <p class="lead">Descargá los modelos Word y completalos para cada actuación concreta. Los procedimientos completos están en PDF.</p>
+        </header>
+
+        <section class="section" id="modelos" aria-labelledby="mod-t" style="margin-top:0">
+          <h2 id="mod-t">Modelos Word para completar</h2>
+          <ul class="grid grid--2" style="list-style:none;padding:0;margin:0">
+            <li class="card doc"><span class="doc__type" aria-hidden="true">DOCX</span><div>
+              <span class="eyebrow">Requisitos y especificaciones técnicas · Artículos</span>
+              <h3>Anexo de artículos</h3>
+              <p>Modelo de requisitos y especificaciones técnicas para la adquisición de artículos: objeto, especificaciones, tabla de cotización, plazo y lugar de entrega, recepción y conformidad, información de la oferta.</p>
+              <p class="meta">Word editable · 83 KB</p>
+              <div class="btn-row"><a class="btn" href="documentos/modelos/Anexo-Articulos_modelo.docx" download><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>Descargar<span class="sr-only"> Anexo de artículos</span></a></div></div></li><li class="card doc"><span class="doc__type" aria-hidden="true">DOCX</span><div>
+              <span class="eyebrow">Requisitos y especificaciones técnicas · Servicios</span>
+              <h3>Anexo de servicios</h3>
+              <p>Modelo de requisitos y especificaciones técnicas (RET) para la contratación de servicios: objeto y monto máximo, alcance, cotización por ítem, utilización de los servicios según el procedimiento de Compras, recepción y conformidad.</p>
+              <p class="meta">Word editable · 80 KB</p>
+              <div class="btn-row"><a class="btn" href="documentos/modelos/Anexo-Servicios.docx" download><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>Descargar<span class="sr-only"> Anexo de servicios</span></a></div></div></li><li class="card doc"><span class="doc__type" aria-hidden="true">DOCX</span><div>
+              <span class="eyebrow">Recepción de muestras</span>
+              <h3>Constancia de recepción de muestras</h3>
+              <p>Constancia para registrar las muestras que entrega un proveedor en el marco de una compra. Deja asentado que la recepción no implica su aprobación ni la aceptación de la oferta.</p>
+              <p class="meta">Word editable · 81 KB</p>
+              <div class="btn-row"><a class="btn" href="documentos/modelos/Modelo_Constancia_recepcion_muestras.docx" download><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>Descargar<span class="sr-only"> Constancia de recepción de muestras</span></a></div></div></li><li class="card doc"><span class="doc__type" aria-hidden="true">DOCX</span><div>
+              <span class="eyebrow">Entrega</span>
+              <h3>Intimación por incumplimiento de entrega</h3>
+              <p>Comunicación al proveedor para intimar la entrega de lo pendiente en pedidos con plazo vencido.</p>
+              <p class="meta">Word editable · 81 KB</p>
+              <div class="btn-row"><a class="btn" href="documentos/modelos/Modelo_Intimacion_entrega.docx" download><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>Descargar<span class="sr-only"> Intimación por incumplimiento de entrega</span></a></div></div></li>
           </ul>
-        </noscript>
-        <p class="measure" style="margin-top:2rem;color:var(--muted)">Esta biblioteca se ampliará a medida que se aprueben nuevos procedimientos, plantillas, listas de verificación y modelos de informe.</p>
-      </div>
-    </section>
-  </main>
+          <div class="note note--warn" style="margin-top:1rem">
+            <span class="note__title">Uso de los modelos</span>
+            <p>Completá los campos marcados entre corchetes y eliminá los textos guía antes de publicar o enviar. Si tenés dudas sobre qué incluir, consultá a Compras. Confirmá que sea la versión vigente antes de usarlo.</p>
+          </div>
+        </section>
 
-  <footer class="site-footer">
-    <div class="container site-footer__inner">
-      <div class="footer-units">
-        <span class="u-dept">Departamento de Desarrollo Ambiental</span>
-        <span>División Limpieza y Gestión de Residuos</span>
-        <span>Gerencia de Suministros y Contrataciones</span>
+        <section class="section" id="procedimientos" aria-labelledby="proc-t">
+          <h2 id="proc-t">Procedimientos</h2>
+          <ul class="grid grid--2" style="list-style:none;padding:0;margin:0">
+            <li class="card doc"><span class="doc__type doc__type--pdf" aria-hidden="true">PDF</span><div>
+              <span class="eyebrow">PR-01 · Versión 02</span>
+              <h3>Compras descentralizadas</h3>
+              <p>Guía del procedimiento, desde la solicitud hasta la adjudicación y el archivo.</p>
+              <p class="meta">PDF · 498 KB</p>
+              <div class="btn-row"><a class="btn btn--sec" href="documentos/procedimientos/PR-01_Compras_descentralizadas.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M14 4h6v6M20 4l-9 9"/><path d="M18 14v6H4V6h6"/></svg>Abrir<span class="sr-only"> (se abre en una pestaña nueva)</span></a><a class="btn btn--sec" href="documentos/procedimientos/PR-01_Compras_descentralizadas.pdf" download><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>Descargar<span class="sr-only"> Compras descentralizadas</span></a></div></div></li><li class="card doc"><span class="doc__type doc__type--pdf" aria-hidden="true">PDF</span><div>
+              <span class="eyebrow">PR-02 · Versión 02</span>
+              <h3>Compras centralizadas</h3>
+              <p>Guía del procedimiento con intervención de la Unidad U5320.</p>
+              <p class="meta">PDF · 696 KB</p>
+              <div class="btn-row"><a class="btn btn--sec" href="documentos/procedimientos/PR-02_Compras_centralizadas.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M14 4h6v6M20 4l-9 9"/><path d="M18 14v6H4V6h6"/></svg>Abrir<span class="sr-only"> (se abre en una pestaña nueva)</span></a><a class="btn btn--sec" href="documentos/procedimientos/PR-02_Compras_centralizadas.pdf" download><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>Descargar<span class="sr-only"> Compras centralizadas</span></a></div></div></li><li class="card doc"><span class="doc__type doc__type--pdf" aria-hidden="true">PDF</span><div>
+              <span class="eyebrow">PR-03 · Versión 02</span>
+              <h3>Utilización de servicios contratados con pedido SAP</h3>
+              <p>Pedido, coordinación, conformidad, hoja de servicio y saldo.</p>
+              <p class="meta">PDF · 369 KB</p>
+              <div class="btn-row"><a class="btn btn--sec" href="documentos/procedimientos/PR-03_Utilizacion_de_servicios.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M14 4h6v6M20 4l-9 9"/><path d="M18 14v6H4V6h6"/></svg>Abrir<span class="sr-only"> (se abre en una pestaña nueva)</span></a><a class="btn btn--sec" href="documentos/procedimientos/PR-03_Utilizacion_de_servicios.pdf" download><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>Descargar<span class="sr-only"> Utilización de servicios contratados con pedido SAP</span></a></div></div></li><li class="card doc"><span class="doc__type doc__type--pdf" aria-hidden="true">PDF</span><div>
+              <span class="eyebrow">PR-04 · Versión 1</span>
+              <h3>Compras directas sin publicación y por excepción</h3>
+              <p>Instructivo de aplicación del artículo 33 del TOCAF.</p>
+              <p class="meta">PDF · 108 KB</p>
+              <div class="btn-row"><a class="btn btn--sec" href="documentos/procedimientos/PR-04_Compras_directas_sin_publicacion_y_CDE.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M14 4h6v6M20 4l-9 9"/><path d="M18 14v6H4V6h6"/></svg>Abrir<span class="sr-only"> (se abre en una pestaña nueva)</span></a><a class="btn btn--sec" href="documentos/procedimientos/PR-04_Compras_directas_sin_publicacion_y_CDE.pdf" download><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>Descargar<span class="sr-only"> Compras directas sin publicación y por excepción</span></a></div></div></li>
+          </ul>
+        </section>
+
+        <section class="section" id="marco" aria-labelledby="marco-t">
+          <h2 id="marco-t">Documento marco</h2>
+          <ul class="grid grid--2" style="list-style:none;padding:0;margin:0">
+            <li class="card doc"><span class="doc__type doc__type--pdf" aria-hidden="true">PDF</span><div>
+              <span class="eyebrow">Marco de PR-01 a PR-03</span>
+              <h3>Protocolo de Actuación de Almacenes y Compras de Servicios Generales</h3>
+              <p>Establece las responsabilidades de las dependencias, Compras y Almacenes. Los procedimientos citan sus numerales.</p>
+              <p class="meta">PDF · 103 KB</p>
+              <div class="btn-row"><a class="btn btn--sec" href="documentos/procedimientos/Protocolo_Almacenes_y_Compras.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M14 4h6v6M20 4l-9 9"/><path d="M18 14v6H4V6h6"/></svg>Abrir<span class="sr-only"> (se abre en una pestaña nueva)</span></a><a class="btn btn--sec" href="documentos/procedimientos/Protocolo_Almacenes_y_Compras.pdf" download><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>Descargar<span class="sr-only"> Protocolo de Actuación de Almacenes y Compras de Servicios Generales</span></a></div></div></li>
+          </ul>
+        </section>
       </div>
-      <div class="footer-meta">
-        <p><strong>Portal Operativo de Compras · <span data-cfg="version">V0.1</span></strong></p>
-        <p><em data-cfg="aviso">Contenido en proceso de actualización y mejora.</em></p>
-        <p><a data-cfg-mail="" href="mailto:comprasyalmacenes.suministros@imm.gub.uy"><span data-cfg="correo">comprasyalmacenes.suministros@imm.gub.uy</span></a></p>
-        <p><a href="./index.html#sobre">Sobre este portal</a></p>
-      </div>
+    </main>
+  </div>
+
+  <footer class="foot">
+    <div>
+      <p><strong>Departamento de Desarrollo Ambiental</strong></p>
+      <p>División Limpieza y Gestión de Residuos</p>
+      <p>Gerencia de Suministros y Contrataciones · Compras Mantenimiento</p>
+    </div>
+    <div>
+      <p><strong>Portal Operativo de Compras · <span data-cfg="version">V2</span></strong></p>
+      <p>Carácter informativo y operativo. Ante diferencias, prevalecen la normativa vigente, los procedimientos aprobados y las actuaciones administrativas.</p>
+      <p><a href="mailto:comprasyalmacenes.suministros@imm.gub.uy">comprasyalmacenes.suministros@imm.gub.uy</a></p>
     </div>
   </footer>
 
-  <script src="./app.js"></script>
+  <script src="assets/js/app.js"></script>
 </body>
 </html>

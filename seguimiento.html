@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es-UY">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Seguimiento · Portal Operativo de Compras</title>
+  <meta name="description" content="Seguimiento general de solicitudes y compras: módulo en preparación.">
+  <link rel="icon" href="assets/img/logo-im.png">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Ir al contenido</a>
+
+  <header class="top">
+    <div class="top__inner">
+      <!-- EDITAR AQUÍ: logotipo institucional. Reemplazar assets/img/logo-im.png manteniendo el nombre. -->
+      <a class="top__logo" href="index.html"><img src="assets/img/logo-im.png" alt="Intendencia de Montevideo" width="640" height="175"></a>
+      <span class="top__sep" aria-hidden="true"></span>
+      <div class="top__id">
+        <a class="top__name" href="index.html">Portal Operativo de Compras</a>
+        <span class="top__sub">Mantenimiento · División Limpieza y Gestión de Residuos</span>
+      </div>
+      <span class="top__tag">Portal interno · <span data-cfg="version">V2</span></span>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu"><span class="nav-toggle__bars" aria-hidden="true"></span>Menú</button>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside class="side" id="menu" aria-label="Menú del portal">
+      <form class="search" id="search-form" role="search" autocomplete="off" hidden>
+        <label for="search-input">Buscar en el portal</label>
+        <input id="search-input" type="search" placeholder="Buscar en el portal…" aria-controls="search-results" aria-expanded="false">
+        <ul class="search-results" id="search-results" hidden aria-live="polite"></ul>
+      </form>
+      <nav class="side-nav" aria-label="Navegación principal">
+        <p class="side__label">Navegación</p>
+        <ul><li><a href="index.html"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg><span>Inicio</span></a></li><li><a href="procedimientos.html"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M8 8h8M8 12h8M8 16h5"/></svg><span>Procedimientos</span></a></li><li><a href="servicios.html"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="16" rx="1"/><path d="M3 9h18M9 9v11M15 9v11"/></svg><span>Servicios contratados</span></a></li><li><a href="documentos.html"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M14 3H6v18h12V7z"/><path d="M14 3v4h4"/><path d="M12 11v6M9 14l3 3 3-3"/></svg><span>Modelos y documentos</span></a></li><li><a href="seguimiento.html" aria-current="page"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Seguimiento</span><span class="pill pill--soon">Próximamente</span></a></li></ul>
+      </nav>
+      <nav class="side-nav side-nav--sec" aria-label="Ayuda">
+        <p class="side__label">Ayuda</p>
+        <ul><li><a href="como-empezar.html"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg><span>Cómo empezar una solicitud</span></a></li><li><a href="preguntas.html"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.6V14"/><path d="M12 17.5v.01"/></svg><span>Preguntas frecuentes y contacto</span></a></li></ul>
+      </nav>
+      <div class="side__shared">
+        <p class="side__label" style="margin-left:0">Trabajo compartido</p>
+        <strong>Mantenimiento</strong>
+        <p>Conoce la necesidad y aporta lo técnico.</p>
+        <strong>Compras</strong>
+        <p>Orienta y conduce el procedimiento.</p>
+      </div>
+      <div class="side__note"><strong>La normativa y SAP</strong>son la referencia oficial. Este portal orienta.</div>
+    </aside>
+
+    <main id="contenido" tabindex="-1">
+      <div class="wrap">
+        <nav aria-label="Ruta de navegación"><ol class="crumbs"><li><a href="index.html">Inicio</a></li><li aria-current="page">Seguimiento</li></ol></nav>
+        <header class="page-head">
+          <span class="eyebrow">Seguimiento</span>
+          <h1>Seguimiento general de solicitudes y compras</h1>
+          <p class="lead">Un espacio previsto para que Mantenimiento y Compras sigan juntos el estado de las solicitudes y compras.</p>
+          <div class="tags"><span class="pill pill--soon">Próximamente</span></div>
+        </header>
+
+        <section class="card" aria-labelledby="estado" style="padding:clamp(1.25rem,3vw,2rem)">
+          <span class="eyebrow">Estado</span>
+          <h2 id="estado">La planilla todavía está en elaboración</h2>
+          <dl class="facts"><div><dt>Situación</dt><dd>En elaboración</dd></div><div><dt>Incorporación prevista</dt><dd>Fin de 2026</dd></div><div><dt>Uso previsto</dt><dd>2027</dd></div></dl>
+          <div class="btn-row">
+            <span class="btn btn--disabled">Acceso pendiente<span class="sr-only">: la planilla aún no está disponible</span></span>
+          </div>
+          <p class="small" style="margin-top:.75rem">El acceso se agregará en esta página cuando la planilla esté disponible. Por ahora no hay enlace ni datos publicados.</p>
+        </section>
+
+        <section class="section">
+          <div class="note">
+            <span class="note__title">Mientras tanto</span>
+            <p>Para consultar sobre una solicitud o compra en particular, escribí a Compras.</p>
+            <div class="btn-row"><a class="btn" href="mailto:comprasyalmacenes.suministros@imm.gub.uy?subject=Consulta%20sobre%20el%20estado%20de%20una%20solicitud"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="M3 7l9 6 9-6"/></svg>Escribir a Compras</a></div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <footer class="foot">
+    <div>
+      <p><strong>Departamento de Desarrollo Ambiental</strong></p>
+      <p>División Limpieza y Gestión de Residuos</p>
+      <p>Gerencia de Suministros y Contrataciones · Compras Mantenimiento</p>
+    </div>
+    <div>
+      <p><strong>Portal Operativo de Compras · <span data-cfg="version">V2</span></strong></p>
+      <p>Carácter informativo y operativo. Ante diferencias, prevalecen la normativa vigente, los procedimientos aprobados y las actuaciones administrativas.</p>
+      <p><a href="mailto:comprasyalmacenes.suministros@imm.gub.uy">comprasyalmacenes.suministros@imm.gub.uy</a></p>
+    </div>
+  </footer>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

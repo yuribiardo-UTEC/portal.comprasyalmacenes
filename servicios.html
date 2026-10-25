@@ -4,208 +4,106 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Servicios contratados · Portal Operativo de Compras</title>
-  <meta name="description" content="Cómo solicitar y utilizar un servicio que ya cuenta con pedido SAP (PR-03).">
-  <link rel="stylesheet" href="./styles.css">
+  <meta name="description" content="Acceso al Dashboard de Cuentas Corrientes en Google Sheets para consultar el consumo de servicios contratados.">
+  <link rel="icon" href="assets/img/logo-im.png">
+  <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
   <a class="skip-link" href="#contenido">Ir al contenido</a>
 
-  <header class="inst-header">
-    <div class="container inst-header__inner">
-      <div class="inst-brand">
-        <!-- EDITAR AQUÍ: logotipo institucional. Reemplazar el archivo assets/img/logo-im.png manteniendo el nombre. -->
-        <a href="./index.html" aria-label="Portal Operativo de Compras, inicio">
-          <img class="inst-logo" src="./logo-im.png" alt="Intendencia de Montevideo" width="190" height="52">
-        </a>
-        <div class="inst-units">
-          <strong class="u-dept">Departamento de Desarrollo Ambiental</strong>
-          <strong>División Limpieza y Gestión de Residuos</strong>
-          <span>Gerencia de Suministros y Contrataciones</span>
-        </div>
+  <header class="top">
+    <div class="top__inner">
+      <!-- EDITAR AQUÍ: logotipo institucional. Reemplazar assets/img/logo-im.png manteniendo el nombre. -->
+      <a class="top__logo" href="index.html"><img src="assets/img/logo-im.png" alt="Intendencia de Montevideo" width="640" height="175"></a>
+      <span class="top__sep" aria-hidden="true"></span>
+      <div class="top__id">
+        <a class="top__name" href="index.html">Portal Operativo de Compras</a>
+        <span class="top__sub">Mantenimiento · División Limpieza y Gestión de Residuos</span>
       </div>
-      <div class="portal-id">
-        <a class="portal-id__name" href="./index.html">Portal Operativo de Compras</a>
-        <span class="portal-id__sub">Mantenimiento</span>
-        <!-- La versión y el estado se editan en js/app.js (CONFIG) -->
-        <span class="version-tag"><span data-cfg="version">V0.1</span> · <span data-cfg="estado">Portal en desarrollo</span></span>
-      </div>
+      <span class="top__tag">Portal interno · <span data-cfg="version">V2</span></span>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu"><span class="nav-toggle__bars" aria-hidden="true"></span>Menú</button>
     </div>
-    <hr class="inst-rule">
   </header>
 
-  <nav class="site-nav" aria-label="Navegación principal">
-    <div class="container site-nav__inner">
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-list">
-        <span class="nav-toggle__bars" aria-hidden="true"></span> Menú
-      </button>
-      <ul class="nav-list" id="nav-list">
-          <li><a href="./index.html">Inicio</a></li>
-          <li><a href="./como-empezar.html">Cómo empezar</a></li>
-          <li><a href="./procedimientos.html">Procedimientos</a></li>
-          <li><a href="./servicios.html" aria-current="page">Servicios contratados</a></li>
-          <li><a href="./documentos.html">Documentos</a></li>
-          <li><a href="./preguntas.html">Preguntas frecuentes</a></li>
-          <li><a href="./preguntas.html#contacto">Contacto</a></li>
-      </ul>
-      <form class="search" id="search-form" role="search" autocomplete="off">
+  <div class="layout">
+    <aside class="side" id="menu" aria-label="Menú del portal">
+      <form class="search" id="search-form" role="search" autocomplete="off" hidden>
         <label for="search-input">Buscar en el portal</label>
-        <input id="search-input" type="search" placeholder="Buscar en el portal..." aria-controls="search-results" aria-expanded="false">
+        <input id="search-input" type="search" placeholder="Buscar en el portal…" aria-controls="search-results" aria-expanded="false">
         <ul class="search-results" id="search-results" hidden aria-live="polite"></ul>
       </form>
-    </div>
-  </nav>
-
-  <main id="contenido" tabindex="-1">
-    <div class="container">
-      <nav class="breadcrumbs" aria-label="Ruta de navegación">
-        <ol><li><a href="./index.html">Inicio</a></li><li aria-current="page">Servicios contratados</li></ol>
+      <nav class="side-nav" aria-label="Navegación principal">
+        <p class="side__label">Navegación</p>
+        <ul><li><a href="index.html"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg><span>Inicio</span></a></li><li><a href="procedimientos.html"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M8 8h8M8 12h8M8 16h5"/></svg><span>Procedimientos</span></a></li><li><a href="servicios.html" aria-current="page"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="16" rx="1"/><path d="M3 9h18M9 9v11M15 9v11"/></svg><span>Servicios contratados</span></a></li><li><a href="documentos.html"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M14 3H6v18h12V7z"/><path d="M14 3v4h4"/><path d="M12 11v6M9 14l3 3 3-3"/></svg><span>Modelos y documentos</span></a></li><li><a href="seguimiento.html"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Seguimiento</span><span class="pill pill--soon">Próximamente</span></a></li></ul>
       </nav>
+      <nav class="side-nav side-nav--sec" aria-label="Ayuda">
+        <p class="side__label">Ayuda</p>
+        <ul><li><a href="como-empezar.html"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg><span>Cómo empezar una solicitud</span></a></li><li><a href="preguntas.html"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.6V14"/><path d="M12 17.5v.01"/></svg><span>Preguntas frecuentes y contacto</span></a></li></ul>
+      </nav>
+      <div class="side__shared">
+        <p class="side__label" style="margin-left:0">Trabajo compartido</p>
+        <strong>Mantenimiento</strong>
+        <p>Conoce la necesidad y aporta lo técnico.</p>
+        <strong>Compras</strong>
+        <p>Orienta y conduce el procedimiento.</p>
+      </div>
+      <div class="side__note"><strong>La normativa y SAP</strong>son la referencia oficial. Este portal orienta.</div>
+    </aside>
+
+    <main id="contenido" tabindex="-1">
+      <div class="wrap">
+        <nav aria-label="Ruta de navegación"><ol class="crumbs"><li><a href="index.html">Inicio</a></li><li aria-current="page">Servicios contratados</li></ol></nav>
+        <header class="page-head">
+          <span class="eyebrow">Servicios contratados</span>
+          <h1>Servicios contratados y consumo</h1>
+          <p class="lead">Acceso al Dashboard de Cuentas Corrientes, la planilla de Google Sheets donde se consulta el consumo de los servicios contratados.</p>
+        </header>
+
+        <section class="card feature" aria-labelledby="dash">
+          <span class="card__icon feature__icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="16" rx="1"/><path d="M3 9h18M9 9v11M15 9v11"/></svg></span>
+          <div style="min-width:0">
+            <span class="eyebrow">Planilla en Google Drive</span>
+            <h2 id="dash" style="margin-bottom:.4rem">Dashboard de Cuentas Corrientes</h2>
+            <p style="color:var(--muted)">La planilla se abre en Google Sheets, en una pestaña nueva. El portal no copia ni muestra sus datos.</p>
+            <a class="btn btn--lg" href="https://docs.google.com/spreadsheets/d/1NAEIhjoNeMcGJzpsgU3U9vtMtz82D_B0fvaAfEnM7wE/edit" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M14 4h6v6M20 4l-9 9"/><path d="M18 14v6H4V6h6"/></svg>Abrir el Dashboard en Google Sheets<span class="sr-only"> (se abre en una pestaña nueva)</span></a>
+            <p class="small" style="margin-top:.85rem"><strong>Acceso:</strong> depende de los permisos de Google Drive. Si la planilla no abre o pide solicitar acceso, ingresá con tu cuenta habilitada o escribí a <a href="mailto:comprasyalmacenes.suministros@imm.gub.uy?subject=Acceso%20al%20Dashboard%20de%20Cuentas%20Corrientes">comprasyalmacenes.suministros@imm.gub.uy</a>.</p>
+          </div>
+        </section>
+
+        <section class="section" aria-labelledby="como">
+          <span class="eyebrow">Cómo se usa</span>
+          <h2 id="como">El Dashboard acompaña el procedimiento PR-03</h2>
+          <ol class="grid grid--3" style="list-style:none;padding:0;margin:0">
+            <li class="card"><span class="num">1</span><h3>Consultar</h3><p>Revisá en el Dashboard el servicio contratado y su consumo.</p></li>
+            <li class="card"><span class="num">2</span><h3>Pedir a Compras</h3><p>El servicio se pide a Compras, no directamente a la empresa. Compras verifica el saldo del pedido y coordina la fecha.</p></li>
+            <li class="card"><span class="num">3</span><h3>Dar la conformidad</h3><p>Con tu conformidad técnica y el remito, Compras genera la hoja de servicio en SAP y actualiza el saldo.</p></li>
+          </ol>
+          <div class="btn-row"><a class="btn btn--sec" href="pr-03.html">Ver el procedimiento PR-03</a><a class="btn btn--sec" href="pr-03.html#como-pedir">Cómo pedir un servicio</a></div>
+        </section>
+
+        <section class="section">
+          <div class="note">
+            <span class="note__title">Importante</span>
+            <p>El Dashboard ayuda a consultar. SAP es el registro oficial del pedido y de las hojas de servicio; ante diferencias con una planilla, prevalece SAP (PR-03, consejos útiles; Protocolo, numeral 3).</p>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <footer class="foot">
+    <div>
+      <p><strong>Departamento de Desarrollo Ambiental</strong></p>
+      <p>División Limpieza y Gestión de Residuos</p>
+      <p>Gerencia de Suministros y Contrataciones · Compras Mantenimiento</p>
     </div>
-    <div class="container page-head">
-      <h1>¿Necesitás utilizar un servicio ya contratado?</h1>
-      <p>Si el servicio ya cuenta con un pedido SAP notificado a la empresa adjudicataria y disponible, su utilización se coordina mediante el procedimiento PR-03.</p>
-    </div>
-
-    <section class="section" id="circuito" aria-labelledby="circuito-titulo">
-      <div class="container">
-        <h2 id="circuito-titulo">El circuito, paso a paso</h2>
-        <p class="legend"><span>Responsables:</span> <span class="actor actor--dep">Dependencia solicitante</span> <span class="actor actor--compras">Gerencia/Compras</span> <span class="actor actor--empresa">Empresa adjudicataria</span></p>
-        <ol class="steps">
-          <li>
-            <h3>Servicio disponible</h3>
-            <p><span class="actor actor--compras">Gerencia/Compras</span></p>
-            <p>Una vez notificado el pedido SAP a la empresa, el servicio queda disponible para su utilización. Compras registra en la planilla de seguimiento el número de pedido, la empresa y el monto.</p>
-          </li>
-          <li>
-            <h3>Solicitud</h3>
-            <p><span class="actor actor--dep">Dependencia solicitante</span></p>
-            <p>La dependencia solicita la utilización del servicio a Compras, indicando qué servicio necesita, dónde debe realizarse, la urgencia y la información técnica necesaria para identificar el trabajo.</p>
-          </li>
-          <li id="saldo">
-            <h3>Control de saldo y coordinación</h3>
-            <p><span class="actor actor--compras">Gerencia/Compras</span></p>
-            <p>Compras verifica que el pedido tenga saldo disponible, contacta a la empresa con el número de pedido SAP y coordina la fecha del trabajo con la empresa y la dependencia.</p>
-          </li>
-          <li>
-            <h3>Ejecución y remito</h3>
-            <p><span class="actor actor--empresa">Empresa adjudicataria</span></p>
-            <p>La empresa ejecuta el trabajo, con el acompañamiento técnico de la dependencia cuando corresponda, y entrega el remito con la fecha, la unidad y el detalle de lo realizado.</p>
-          </li>
-          <li id="conformidad">
-            <h3>Conformidad técnica</h3>
-            <p><span class="actor actor--dep">Dependencia solicitante</span></p>
-            <p>La dependencia verifica técnicamente que el trabajo esté bien hecho.</p>
-            <ul>
-              <li><strong>Si está conforme:</strong> comunica la conformidad técnica a Compras, citando o adjuntando el remito.</li>
-              <li><strong>Si no está conforme:</strong> indica las observaciones a Compras, que las comunica a la empresa para su corrección según las condiciones del contrato. El trabajo vuelve al paso 4.</li>
-            </ul>
-          </li>
-          <li id="hoja-servicio">
-            <h3>Hoja de servicio</h3>
-            <p><span class="actor actor--compras">Gerencia/Compras</span></p>
-            <p>Con la conformidad técnica y el remito, Compras genera la hoja de servicio en SAP y comunica su número a la empresa para que facture.</p>
-          </li>
-          <li>
-            <h3>Actualización del saldo</h3>
-            <p><span class="actor actor--compras">Gerencia/Compras</span></p>
-            <p>Compras registra la hoja de servicio en la planilla de seguimiento y descuenta su monto del saldo del pedido, de modo que se conozca lo disponible por pedido y por empresa.</p>
-          </li>
-        </ol>
-
-        <div class="notice notice--warn">
-          <span class="notice__label">Muy importante</span>
-          <p>Las condiciones del modelo de Requisitos y Especificaciones Técnicas para servicios establecen que la empresa realiza trabajos únicamente cuando son solicitados y coordinados por Compras, sin ejecutar trabajos al margen de ese circuito y dentro del saldo disponible del pedido. Agotado el saldo, no pueden continuarse servicios con cargo a ese pedido, salvo que exista una nueva habilitación o contratación administrativa.</p>
-          <span class="notice-source">Modelo de Requisitos y Especificaciones Técnicas para servicios, sección 4.</span>
-        </div>
-        <div class="notice notice--warn">
-          <span class="notice__label">Muy importante</span>
-          <p>La entrega de un remito no implica por sí sola la conformidad técnica del servicio. La conformidad la otorga la dependencia solicitante, con referencia al remito.</p>
-          <span class="notice-source">PR-03, actividad 5, y modelo de Requisitos y Especificaciones Técnicas, sección 5.</span>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section--band" aria-labelledby="roles-servicio">
-      <div class="container">
-        <h2 id="roles-servicio">Quién hace qué en la utilización de servicios</h2>
-        <div class="split split--3">
-          <div class="split__col">
-            <h3>Dependencia solicitante</h3>
-            <ul>
-              <li>Solicita el servicio indicando qué se necesita, dónde y con qué urgencia.</li>
-              <li>Aporta la información técnica para coordinar el trabajo.</li>
-              <li>Acompaña técnicamente la ejecución, cuando corresponde.</li>
-              <li>Verifica el trabajo y emite la conformidad técnica, o indica las observaciones.</li>
-            </ul>
-          </div>
-          <div class="split__col split__col--compras">
-            <h3>Gerencia de Suministros y Contrataciones</h3>
-            <ul>
-              <li>Orienta sobre cómo solicitar la utilización.</li>
-              <li>Registra los pedidos SAP disponibles.</li>
-              <li>Verifica el saldo y coordina la fecha con la empresa y la dependencia.</li>
-              <li>Comunica a la empresa las observaciones, cuando las hay.</li>
-              <li>Genera la hoja de servicio y actualiza el saldo.</li>
-            </ul>
-          </div>
-          <div class="split__col split__col--u5320">
-            <h3>Empresa adjudicataria</h3>
-            <ul>
-              <li>Ejecuta el servicio en la fecha coordinada.</li>
-              <li>Entrega el remito con la fecha, la unidad y el detalle de lo realizado.</li>
-              <li>Corrige lo observado, según las condiciones del contrato.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" aria-labelledby="buenas-practicas">
-      <div class="container">
-        <h2 id="buenas-practicas">Para tener en cuenta</h2>
-        <div class="table-wrap">
-          <table>
-            <tbody>
-              <tr><th scope="row">Primero la conformidad</th><td>La hoja de servicio se genera con la conformidad técnica de la dependencia y el remito de la empresa.</td></tr>
-              <tr><th scope="row">Conformidad a tiempo</th><td>Comunicar la conformidad en forma oportuna evita demoras en la hoja de servicio y en la facturación.</td></tr>
-              <tr><th scope="row">Dejar registro</th><td>Conviene canalizar solicitudes, coordinaciones y conformidades por correo institucional, porque deja constancia y evita malentendidos.</td></tr>
-              <tr><th scope="row">SAP es el registro oficial</th><td>La planilla de seguimiento ayuda a conocer el saldo por pedido y por empresa; ante diferencias, prevalece SAP.</td></tr>
-              <tr><th scope="row">Qué queda fuera</th><td>La contratación del servicio se rige por PR-01 o PR-02. La facturación y el pago no forman parte de PR-03.</td></tr>
-            </tbody>
-          </table>
-        </div>
-
-        <details>
-          <summary>Ver flujograma del procedimiento</summary>
-          <div class="details-body">
-            <img src="./flujograma-pr03.png" alt="Flujograma PR-03 en tres columnas, dependencia solicitante, Gerencia de Suministros y Contrataciones y empresa adjudicataria, con las 7 actividades en cuatro etapas. El detalle está en el circuito paso a paso." width="1920" height="1782" loading="lazy">
-          </div>
-        </details>
-
-        <div class="btn-row">
-          <a class="btn" data-doc="PR-03" href="./PR-03.pdf" target="_blank" rel="noopener">Ver PR-03 completo</a>
-          <a class="btn btn--secondary" data-cfg-mail="Solicitud de utilización de servicio" href="mailto:comprasyalmacenes.suministros@imm.gub.uy">Solicitar un servicio por correo</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container site-footer__inner">
-      <div class="footer-units">
-        <span class="u-dept">Departamento de Desarrollo Ambiental</span>
-        <span>División Limpieza y Gestión de Residuos</span>
-        <span>Gerencia de Suministros y Contrataciones</span>
-      </div>
-      <div class="footer-meta">
-        <p><strong>Portal Operativo de Compras · <span data-cfg="version">V0.1</span></strong></p>
-        <p><em data-cfg="aviso">Contenido en proceso de actualización y mejora.</em></p>
-        <p><a data-cfg-mail="" href="mailto:comprasyalmacenes.suministros@imm.gub.uy"><span data-cfg="correo">comprasyalmacenes.suministros@imm.gub.uy</span></a></p>
-        <p><a href="./index.html#sobre">Sobre este portal</a></p>
-      </div>
+    <div>
+      <p><strong>Portal Operativo de Compras · <span data-cfg="version">V2</span></strong></p>
+      <p>Carácter informativo y operativo. Ante diferencias, prevalecen la normativa vigente, los procedimientos aprobados y las actuaciones administrativas.</p>
+      <p><a href="mailto:comprasyalmacenes.suministros@imm.gub.uy">comprasyalmacenes.suministros@imm.gub.uy</a></p>
     </div>
   </footer>
 
-  <script src="./app.js"></script>
+  <script src="assets/js/app.js"></script>
 </body>
 </html>

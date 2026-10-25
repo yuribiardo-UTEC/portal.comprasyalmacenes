@@ -4,211 +4,166 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Portal Operativo de Compras · Mantenimiento</title>
-  <meta name="description" content="Información práctica para gestionar compras y servicios con la Gerencia de Suministros y Contrataciones.">
-  <link rel="stylesheet" href="./styles.css">
+  <meta name="description" content="Portal interno para orientar solicitudes de compra, consultar procedimientos, descargar modelos y acceder al consumo de servicios.">
+  <link rel="icon" href="assets/img/logo-im.png">
+  <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
   <a class="skip-link" href="#contenido">Ir al contenido</a>
 
-  <header class="inst-header">
-    <div class="container inst-header__inner">
-      <div class="inst-brand">
-        <!-- EDITAR AQUÍ: logotipo institucional. Reemplazar el archivo assets/img/logo-im.png manteniendo el nombre. -->
-        <a href="./index.html" aria-label="Portal Operativo de Compras, inicio">
-          <img class="inst-logo" src="./logo-im.png" alt="Intendencia de Montevideo" width="190" height="52">
-        </a>
-        <div class="inst-units">
-          <strong class="u-dept">Departamento de Desarrollo Ambiental</strong>
-          <strong>División Limpieza y Gestión de Residuos</strong>
-          <span>Gerencia de Suministros y Contrataciones</span>
-        </div>
+  <header class="top">
+    <div class="top__inner">
+      <!-- EDITAR AQUÍ: logotipo institucional. Reemplazar assets/img/logo-im.png manteniendo el nombre. -->
+      <a class="top__logo" href="index.html"><img src="assets/img/logo-im.png" alt="Intendencia de Montevideo" width="640" height="175"></a>
+      <span class="top__sep" aria-hidden="true"></span>
+      <div class="top__id">
+        <a class="top__name" href="index.html">Portal Operativo de Compras</a>
+        <span class="top__sub">Mantenimiento · División Limpieza y Gestión de Residuos</span>
       </div>
-      <div class="portal-id">
-        <a class="portal-id__name" href="./index.html">Portal Operativo de Compras</a>
-        <span class="portal-id__sub">Mantenimiento</span>
-        <!-- La versión y el estado se editan en js/app.js (CONFIG) -->
-        <span class="version-tag"><span data-cfg="version">V0.1</span> · <span data-cfg="estado">Portal en desarrollo</span></span>
-      </div>
+      <span class="top__tag">Portal interno · <span data-cfg="version">V2</span></span>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu"><span class="nav-toggle__bars" aria-hidden="true"></span>Menú</button>
     </div>
-    <hr class="inst-rule">
   </header>
 
-  <nav class="site-nav" aria-label="Navegación principal">
-    <div class="container site-nav__inner">
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-list">
-        <span class="nav-toggle__bars" aria-hidden="true"></span> Menú
-      </button>
-      <ul class="nav-list" id="nav-list">
-          <li><a href="./index.html" aria-current="page">Inicio</a></li>
-          <li><a href="./como-empezar.html">Cómo empezar</a></li>
-          <li><a href="./procedimientos.html">Procedimientos</a></li>
-          <li><a href="./servicios.html">Servicios contratados</a></li>
-          <li><a href="./documentos.html">Documentos</a></li>
-          <li><a href="./preguntas.html">Preguntas frecuentes</a></li>
-          <li><a href="./preguntas.html#contacto">Contacto</a></li>
-      </ul>
-      <form class="search" id="search-form" role="search" autocomplete="off">
+  <div class="layout">
+    <aside class="side" id="menu" aria-label="Menú del portal">
+      <form class="search" id="search-form" role="search" autocomplete="off" hidden>
         <label for="search-input">Buscar en el portal</label>
-        <input id="search-input" type="search" placeholder="Buscar en el portal..." aria-controls="search-results" aria-expanded="false">
+        <input id="search-input" type="search" placeholder="Buscar en el portal…" aria-controls="search-results" aria-expanded="false">
         <ul class="search-results" id="search-results" hidden aria-live="polite"></ul>
       </form>
-    </div>
-  </nav>
-
-  <main id="contenido" tabindex="-1">
-    <section class="hero">
-      <div class="container">
-        <h1>Portal Operativo de Compras</h1>
-        <p class="hero__lead">Información práctica para gestionar compras y servicios de forma coordinada con la Gerencia de Suministros y Contrataciones.</p>
-        <p class="hero__text">Este espacio reúne procedimientos, orientaciones y documentos de uso frecuente para las dependencias que trabajan con Compras.</p>
-
+      <nav class="side-nav" aria-label="Navegación principal">
+        <p class="side__label">Navegación</p>
+        <ul><li><a href="index.html" aria-current="page"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg><span>Inicio</span></a></li><li><a href="procedimientos.html"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M8 8h8M8 12h8M8 16h5"/></svg><span>Procedimientos</span></a></li><li><a href="servicios.html"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="16" rx="1"/><path d="M3 9h18M9 9v11M15 9v11"/></svg><span>Servicios contratados</span></a></li><li><a href="documentos.html"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M14 3H6v18h12V7z"/><path d="M14 3v4h4"/><path d="M12 11v6M9 14l3 3 3-3"/></svg><span>Modelos y documentos</span></a></li><li><a href="seguimiento.html"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Seguimiento</span><span class="pill pill--soon">Próximamente</span></a></li></ul>
+      </nav>
+      <nav class="side-nav side-nav--sec" aria-label="Ayuda">
+        <p class="side__label">Ayuda</p>
+        <ul><li><a href="como-empezar.html"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg><span>Cómo empezar una solicitud</span></a></li><li><a href="preguntas.html"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.6V14"/><path d="M12 17.5v.01"/></svg><span>Preguntas frecuentes y contacto</span></a></li></ul>
+      </nav>
+      <div class="side__shared">
+        <p class="side__label" style="margin-left:0">Trabajo compartido</p>
+        <strong>Mantenimiento</strong>
+        <p>Conoce la necesidad y aporta lo técnico.</p>
+        <strong>Compras</strong>
+        <p>Orienta y conduce el procedimiento.</p>
       </div>
-    </section>
+      <div class="side__note"><strong>La normativa y SAP</strong>son la referencia oficial. Este portal orienta.</div>
+    </aside>
 
-    <section class="section section--band" aria-labelledby="que-necesitas">
-      <div class="container">
-        <h2 id="que-necesitas">¿Qué necesitás hacer?</h2>
-        <ul class="task-grid">
-          <li><article class="task">
-            <h3>Iniciar una compra</h3>
-            <p>Conocé qué información necesitás preparar y cómo presentar una solicitud.</p>
-            <a class="task__link" href="./como-empezar.html"><span>Cómo empezar</span></a>
-          </article></li>
-          <li><article class="task">
-            <h3>Compra descentralizada</h3>
-            <p>Consultá las etapas del procedimiento y qué participación tendrá tu dependencia.</p>
-            <a class="task__link" href="./procedimientos.html#pr01"><span>Ver procedimiento</span></a>
-          </article></li>
-          <li><article class="task">
-            <h3>Compra centralizada</h3>
-            <p>Conocé cómo funciona una compra cuando interviene la Unidad U5320.</p>
-            <a class="task__link" href="./procedimientos.html#pr02"><span>Ver procedimiento</span></a>
-          </article></li>
-          <li><article class="task">
-            <h3>Utilizar un servicio contratado</h3>
-            <p>Cómo solicitar y utilizar un servicio que ya cuenta con pedido SAP.</p>
-            <a class="task__link" href="./servicios.html"><span>Cómo utilizarlo</span></a>
-          </article></li>
-          <li><article class="task">
-            <h3>Documentos y modelos</h3>
-            <p>Accedé a procedimientos, requisitos técnicos y documentos de apoyo.</p>
-            <a class="task__link" href="./documentos.html"><span>Ver documentos</span></a>
-          </article></li>
-          <li><article class="task">
-            <h3>Tengo una consulta</h3>
-            <p>Encontrá respuestas rápidas o los canales de contacto de Compras.</p>
-            <a class="task__link" href="./preguntas.html"><span>Consultar</span></a>
-          </article></li>
-        </ul>
-      </div>
-    </section>
+    <main id="contenido" tabindex="-1">
+      <div class="wrap">
+        
+        <header class="page-head">
+          <span class="eyebrow">Inicio</span>
+          <h1>Compras para atender las necesidades de Mantenimiento</h1>
+          <p class="lead">Un espacio de trabajo compartido para orientar solicitudes, consultar procedimientos, descargar modelos y acceder al consumo de servicios.</p>
+        </header>
 
-    <section class="section" aria-labelledby="trabajo-conjunto">
-      <div class="container">
-        <h2 id="trabajo-conjunto">Cómo trabajamos juntos</h2>
-        <p class="section-lead">Cada compra reúne conocimientos complementarios: la dependencia solicitante conoce técnicamente lo que necesita y la Gerencia de Suministros y Contrataciones conoce y conduce el procedimiento para adquirirlo o contratarlo.</p>
-        <div class="joint" role="group" aria-label="Cómo trabajamos juntos">
-          <div class="joint__col">
-            <span class="joint__who">Tu dependencia</span>
-            <p class="joint__claim">Conoce técnicamente lo que necesita.</p>
-            <ul>
-              <li>Identifica y explica la necesidad.</li>
-              <li>Aporta la información y la documentación técnica y define las especificaciones.</li>
-              <li>Responde las consultas técnicas y evalúa técnicamente las ofertas.</li>
-              <li>Verifica técnicamente lo recibido o ejecutado y otorga la conformidad técnica.</li>
-            </ul>
+        <section class="hero" aria-labelledby="hero-t">
+          <div>
+            <span class="eyebrow">Gerencia de Suministros y Contrataciones</span>
+            <h2 id="hero-t">Mantenimiento + Compras</h2>
+            <p>Cada compra es un trabajo en equipo. Mantenimiento sabe qué necesita; Compras sabe cómo comprarlo. Ante cualquier duda, consultá a Compras antes de empezar: es la forma más rápida de evitar devoluciones.</p>
+            <a class="btn" href="procedimientos.html">Ver los procedimientos</a>
           </div>
-          <div class="joint__col joint__col--compras">
-            <span class="joint__who">Gerencia de Suministros y Contrataciones</span>
-            <p class="joint__claim">Conoce y conduce el procedimiento.</p>
-            <ul>
-              <li>Orienta a la dependencia y revisa que la solicitud esté completa.</li>
-              <li>Realiza las actuaciones en SAP y en el expediente.</li>
-              <li>Gestiona publicaciones y comunicaciones y coordina las intervenciones.</li>
-              <li>Realiza los controles administrativos que correspondan.</li>
-            </ul>
+          <div class="hero__pair" aria-hidden="true">
+            <span>Necesidad y aspectos técnicos</span>
+            <strong>Mantenimiento</strong>
+            <span class="arrow">&#8597;</span>
+            <strong>Compras</strong>
+            <span>Orientación y procedimiento</span>
           </div>
-        </div>
-        <p class="joint-note">Vos conocés técnicamente lo que necesitás. Nosotros te orientamos y gestionamos el procedimiento para adquirirlo o contratarlo.</p>
-        <div class="btn-row"><a class="btn btn--secondary" href="./como-empezar.html#quien-hace-que">Ver quién hace qué</a></div>
-      </div>
-    </section>
+        </section>
 
-    <section class="section section--band guide" id="guia" aria-labelledby="guia-titulo">
-      <div class="container">
-        <h2 id="guia-titulo">¿Por dónde empiezo?</h2>
-        <p class="section-lead">Seleccioná qué necesitás hacer. Esta guía te orienta hacia la información correspondiente. La Gerencia de Suministros y Contrataciones determinará el procedimiento administrativo aplicable cuando corresponda.</p>
-        <form id="guide-form" onsubmit="return false">
-          <fieldset>
-            <legend>¿Qué necesitás hacer?</legend>
-            <div class="guide-options">
-              <div class="guide-option"><input type="radio" name="necesidad" id="g-bien" value="bien"><label for="g-bien">Comprar un bien, repuesto, insumo o equipamiento</label></div>
-              <div class="guide-option"><input type="radio" name="necesidad" id="g-servicio" value="servicio"><label for="g-servicio">Contratar un servicio</label></div>
-              <div class="guide-option"><input type="radio" name="necesidad" id="g-usar" value="usar"><label for="g-usar">Utilizar un servicio que ya está contratado</label></div>
-              <div class="guide-option"><input type="radio" name="necesidad" id="g-estado" value="estado"><label for="g-estado">Consultar el estado o la documentación de una compra</label></div>
+        <section class="section" aria-labelledby="accesos">
+          <span class="eyebrow">Punto de partida</span>
+          <h2 id="accesos">¿Qué necesitás resolver?</h2>
+          <ul class="grid grid--2" style="list-style:none;padding:0;margin:0">
+            <li class="card card--link"><span class="card__icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></span><div class="card__body">
+              <h3><a href="procedimientos.html">Procedimientos</a></h3>
+              <p>Compras descentralizadas y centralizadas, utilización de servicios y compras directas sin publicación o por excepción.</p>
+              <div class="tags"><span class="pill">PR-01 a PR-04</span></div></div></li>
+            <li class="card card--link"><span class="card__icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M14 3H6v18h12V7z"/><path d="M14 3v4h4"/><path d="M12 11v6M9 14l3 3 3-3"/></svg></span><div class="card__body">
+              <h3><a href="documentos.html">Modelos y documentos</a></h3>
+              <p>Anexos de artículos y servicios, constancia de recepción de muestras e intimación de entrega, en Word para completar.</p>
+              <div class="tags"><span class="pill">4 modelos Word</span></div></div></li>
+            <li class="card card--link"><span class="card__icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="16" rx="1"/><path d="M3 9h18M9 9v11M15 9v11"/></svg></span><div class="card__body">
+              <h3><a href="servicios.html">Servicios contratados</a></h3>
+              <p>Acceso al Dashboard de Cuentas Corrientes en Google Sheets para consultar el consumo de los servicios.</p>
+              <div class="tags"><span class="pill">Google Sheets</span></div></div></li>
+            <li class="card card--link card--soon"><span class="card__icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><div class="card__body">
+              <h3><a href="seguimiento.html">Seguimiento de solicitudes y compras</a></h3>
+              <p>Planilla general en elaboración. Incorporación prevista a fin de 2026, para su uso en 2027.</p>
+              <div class="tags"><span class="pill pill--soon">Próximamente</span></div></div></li>
+          </ul>
+        </section>
+
+        <section class="section" aria-labelledby="juntos">
+          <span class="eyebrow">Roles complementarios</span>
+          <h2 id="juntos">Cómo trabajamos juntos</h2>
+          <div class="grid grid--2">
+            <div class="card role role--dep">
+              <h3>Mantenimiento (dependencia solicitante)</h3>
+              <ul>
+                <li>Explica la necesidad y define qué se compra y en qué cantidad.</li>
+                <li>Entrega la documentación técnica: especificaciones y requisitos mínimos.</li>
+                <li>Responde las consultas técnicas y evalúa técnicamente las ofertas.</li>
+                <li>Acompaña la ejecución y da la conformidad técnica.</li>
+              </ul>
             </div>
-          </fieldset>
-        </form>
+            <div class="card role role--compras">
+              <h3>Compras (Gerencia de Suministros y Contrataciones)</h3>
+              <ul>
+                <li>Orienta para armar la solicitud y revisa que esté completa.</li>
+                <li>Registra en SAP, gestiona el presupuesto y publica.</li>
+                <li>Deriva las consultas técnicas y coordina con otras unidades.</li>
+                <li>Hace la evaluación administrativa y económica, adjudica, notifica y archiva.</li>
+              </ul>
+            </div>
+          </div>
+          <p class="small" style="margin-top:.75rem">Síntesis de las secciones «En pocas palabras» y «¿Quién hace qué?» de PR-01. En compras centralizadas interviene además la Unidad U5320 (PR-02).</p>
+        </section>
 
-        <div aria-live="polite">
-          <div class="guide-result" data-guide-result="bien" hidden>
-            <h3>Iniciá una solicitud de compra</h3>
-            <p>Presentá la solicitud ante Compras con la justificación, las cantidades, el plazo, la prioridad y la documentación técnica que defina lo que necesitás.</p>
-            <p>La Gerencia de Suministros y Contrataciones determinará el procedimiento administrativo que corresponda de acuerdo con las características de la contratación. No necesitás saber de antemano si será una compra descentralizada (PR-01) o centralizada (PR-02) para iniciar la solicitud.</p>
-            <div class="btn-row"><a class="btn" href="./como-empezar.html">Cómo empezar</a><a class="btn btn--secondary" href="./procedimientos.html#comparacion">Conocer los procedimientos</a></div>
-            <p></p>
+        <section class="section" id="por-donde" aria-labelledby="por-donde-t">
+          <span class="eyebrow">Orientación rápida</span>
+          <h2 id="por-donde-t">¿Por dónde empiezo?</h2>
+          <div class="table-wrap">
+            <table class="stack">
+              <thead><tr><th scope="col">Si necesitás…</th><th scope="col">Dónde mirar</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">Comprar un bien, repuesto, insumo o equipamiento, o contratar un servicio</th><td data-label="Dónde mirar"><a href="como-empezar.html">Cómo empezar una solicitud</a>. Compras confirma si corresponde <a href="pr-01.html">PR-01</a> o <a href="pr-02.html">PR-02</a>.</td></tr>
+                <tr><th scope="row">Usar un servicio que ya tiene pedido SAP</th><td data-label="Dónde mirar"><a href="pr-03.html">PR-03 Utilización de servicios</a> y el <a href="servicios.html">Dashboard de Cuentas Corrientes</a>.</td></tr>
+                <tr><th scope="row">Una compra que no se va a publicar</th><td data-label="Dónde mirar">Revisá antes <a href="pr-04.html">PR-04</a> y consultá a Compras.</td></tr>
+                <tr><th scope="row">Un modelo para completar</th><td data-label="Dónde mirar"><a href="documentos.html#modelos">Modelos y documentos</a>.</td></tr>
+                <tr><th scope="row">Hacer una consulta</th><td data-label="Dónde mirar"><a href="preguntas.html">Preguntas frecuentes</a> o <a href="mailto:comprasyalmacenes.suministros@imm.gub.uy">comprasyalmacenes.suministros@imm.gub.uy</a>.</td></tr>
+              </tbody>
+            </table>
           </div>
-          <div class="guide-result" data-guide-result="servicio" hidden>
-            <h3>Iniciá una solicitud de contratación</h3>
-            <p>La contratación de un servicio comienza, igual que una compra, con la solicitud y la documentación técnica. La Gerencia de Suministros y Contrataciones determinará el procedimiento administrativo que corresponda de acuerdo con las características de la contratación.</p>
-            <p>Para preparar la documentación técnica podés usar el modelo de Requisitos y Especificaciones Técnicas para servicios.</p>
-            <div class="btn-row"><a class="btn" href="./como-empezar.html">Cómo empezar</a><a class="btn btn--secondary" href="./documentos.html">Descargar el modelo</a></div>
-            <p></p>
-          </div>
-          <div class="guide-result" data-guide-result="usar" hidden>
-            <h3>Seguí el procedimiento de utilización (PR-03)</h3>
-            <p>Si el servicio ya cuenta con un pedido SAP notificado a la empresa, solicitá su utilización a Compras. Compras verifica el saldo, coordina con la empresa y, con tu conformidad técnica, genera la hoja de servicio.</p>
-            <div class="btn-row"><a class="btn" href="./servicios.html">Cómo utilizarlo</a></div>
-            <p></p>
-          </div>
-          <div class="guide-result" data-guide-result="estado" hidden>
-            <h3>Consultá con Compras</h3>
-            <p>Los procedimientos y modelos están disponibles en la sección Documentos. Para consultar sobre una compra en particular, podés escribir a Compras.</p>
-            <div class="btn-row"><a class="btn" href="./documentos.html">Ver documentos</a><a class="btn btn--secondary" data-cfg-mail="Consulta sobre el estado de una compra" href="mailto:comprasyalmacenes.suministros@imm.gub.uy">Escribir a Compras</a></div>
-            <p></p>
-          </div>
-        </div>
-        <noscript><p>Para usar la guía es necesario JavaScript. Podés ir directamente a <a href="./como-empezar.html">Cómo empezar</a>, <a href="./procedimientos.html">Procedimientos</a> o <a href="./servicios.html">Servicios contratados</a>.</p></noscript>
-      </div>
-    </section>
+        </section>
 
-    <section class="section" id="sobre" aria-labelledby="sobre-titulo">
-      <div class="container"><div class="measure">
-        <h2 id="sobre-titulo">Sobre este portal</h2>
-        <!-- EDITAR AQUÍ: texto de presentación del portal -->
-        <p>Esta es una primera versión del Portal Operativo de Compras. Su objetivo es centralizar criterios, procedimientos, documentos y orientaciones de uso frecuente.</p>
-        <p>El contenido se irá ampliando y ajustando progresivamente a medida que se sistematicen los procesos y la dinámica de trabajo de la unidad.</p>
-        <p>El portal tiene carácter informativo y operativo. Ante diferencias, prevalecen la normativa vigente, los procedimientos aprobados y las actuaciones administrativas correspondientes.</p>
-      </div></div>
-    </section>
-  </main>
+        <section class="section" aria-labelledby="sobre">
+          <div class="note note--plain measure">
+            <span class="note__title" id="sobre">Sobre este portal</span>
+            <p>Herramienta interna de orientación de la Gerencia de Suministros y Contrataciones para el trabajo con Mantenimiento. Resume los procedimientos y da acceso a los documentos completos. Ante diferencias, prevalecen la normativa vigente, los procedimientos aprobados y las actuaciones administrativas. SAP es el registro oficial.</p>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
 
-  <footer class="site-footer">
-    <div class="container site-footer__inner">
-      <div class="footer-units">
-        <span class="u-dept">Departamento de Desarrollo Ambiental</span>
-        <span>División Limpieza y Gestión de Residuos</span>
-        <span>Gerencia de Suministros y Contrataciones</span>
-      </div>
-      <div class="footer-meta">
-        <p><strong>Portal Operativo de Compras · <span data-cfg="version">V0.1</span></strong></p>
-        <p><em data-cfg="aviso">Contenido en proceso de actualización y mejora.</em></p>
-        <p><a data-cfg-mail="" href="mailto:comprasyalmacenes.suministros@imm.gub.uy"><span data-cfg="correo">comprasyalmacenes.suministros@imm.gub.uy</span></a></p>
-        <p><a href="./index.html#sobre">Sobre este portal</a></p>
-      </div>
+  <footer class="foot">
+    <div>
+      <p><strong>Departamento de Desarrollo Ambiental</strong></p>
+      <p>División Limpieza y Gestión de Residuos</p>
+      <p>Gerencia de Suministros y Contrataciones · Compras Mantenimiento</p>
+    </div>
+    <div>
+      <p><strong>Portal Operativo de Compras · <span data-cfg="version">V2</span></strong></p>
+      <p>Carácter informativo y operativo. Ante diferencias, prevalecen la normativa vigente, los procedimientos aprobados y las actuaciones administrativas.</p>
+      <p><a href="mailto:comprasyalmacenes.suministros@imm.gub.uy">comprasyalmacenes.suministros@imm.gub.uy</a></p>
     </div>
   </footer>
 
-  <script src="./app.js"></script>
+  <script src="assets/js/app.js"></script>
 </body>
 </html>
