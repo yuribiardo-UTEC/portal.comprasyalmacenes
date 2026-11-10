@@ -32,7 +32,7 @@ const SEARCH_INDEX = [
   { t: "Intimación por incumplimiento de entrega", p: "Modelos y documentos", u: "documentos.html#modelos", k: "intimacion entrega incumplimiento proveedor atraso word" },
   { t: "Protocolo de Actuación de Almacenes y Compras", p: "Modelos y documentos", u: "documentos.html#marco", k: "protocolo documento marco numerales" },
   { t: "Servicios contratados: Dashboard de Cuentas Corrientes", p: "Servicios contratados", u: "servicios.html", k: "dashboard cuentas corrientes google sheets planilla consumo saldo servicios" },
-  { t: "Seguimiento general de solicitudes y compras", p: "Seguimiento", u: "seguimiento.html", k: "seguimiento estado solicitudes compras proximamente 2027" },
+  { t: "Seguimiento general de solicitudes y compras", p: "Seguimiento", u: "seguimiento.html", k: "seguimiento estado solicitudes compras SP solicitud de pedido retenida grabada adjudicada tablero registro planilla google sheets" },
   { t: "Cómo empezar una solicitud", p: "Cómo empezar", u: "como-empezar.html", k: "iniciar empezar solicitud necesidad justificacion cantidades plazo prioridad documentacion tecnica" },
   { t: "Preguntas frecuentes y contacto", p: "Preguntas frecuentes", u: "preguntas.html", k: "preguntas frecuentes dudas contacto correo consulta" }
 ];
