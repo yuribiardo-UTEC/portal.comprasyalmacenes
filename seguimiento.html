@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Seguimiento · Portal Operativo de Compras</title>
+  <title>Seguimientos de Compras Mantenimiento · Portal Operativo de Compras</title>
   <meta name="description" content="Acceso al Registro de solicitudes de pedido de Compras de Mantenimiento en Google Sheets: estado SAP, etapa y presupuesto solicitado.">
   <link rel="icon" href="assets/img/logo-im.png">
   <link rel="stylesheet" href="assets/css/styles.css">
@@ -52,10 +52,10 @@
 
     <main id="contenido" tabindex="-1">
       <div class="wrap">
-        <nav aria-label="Ruta de navegación"><ol class="crumbs"><li><a href="index.html">Inicio</a></li><li aria-current="page">Seguimiento</li></ol></nav>
+        <nav aria-label="Ruta de navegación"><ol class="crumbs"><li><a href="index.html">Inicio</a></li><li aria-current="page">Seguimientos de Compras Mantenimiento</li></ol></nav>
         <header class="page-head">
           <span class="eyebrow">Seguimiento</span>
-          <h1>Seguimiento general de solicitudes y compras</h1>
+          <h1>Seguimientos de Compras Mantenimiento</h1>
           <p class="lead">Acceso al Registro de solicitudes de pedido (SP) de Compras de Mantenimiento: Buceo, Cantón 2 y DFR. Ahí se sigue el estado de cada SP y el presupuesto solicitado.</p>
         </header>
 
@@ -67,6 +67,48 @@
             <p style="color:var(--muted)">La planilla se abre en Google Sheets, en una pestaña nueva. El portal no copia ni muestra sus datos.</p>
             <a class="btn btn--lg" href="https://docs.google.com/spreadsheets/d/1VoA81j26FtEZt8T6w-HY59uPAmby2gq9ew39wVbFG-g/edit" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M14 4h6v6M20 4l-9 9"/><path d="M18 14v6H4V6h6"/></svg>Abrir el Registro en Google Sheets<span class="sr-only"> (se abre en una pestaña nueva)</span></a>
             <p class="small" style="margin-top:.85rem"><strong>Acceso:</strong> solo para las personas habilitadas en Google Drive. Si la planilla no abre o pide solicitar acceso, ingresá con tu cuenta habilitada o escribí a <a href="mailto:comprasyalmacenes.suministros@imm.gub.uy?subject=Acceso%20al%20Registro%20SP">comprasyalmacenes.suministros@imm.gub.uy</a>.</p>
+          </div>
+        </section>
+
+        <section class="section" aria-labelledby="flujo">
+          <span class="eyebrow">Cómo funciona el Tablero</span>
+          <h2 id="flujo">Del bloque semanal de ZAS al Tablero</h2>
+          <p>Todo se carga en la hoja <strong>SolPed ZAS</strong>. El Tablero no se edita: lee esa hoja y se recalcula solo.</p>
+          <ol class="flow">
+            <li><span class="flow__k">Paso 1 · SolPed ZAS</span><h3>Bloque semanal</h3><p>Se pega la semana de ZAS en las columnas A a L, con su formato. Cada SP puede ocupar varias filas, una por artículo.</p></li>
+            <li><span class="flow__k">Paso 2 · Fila principal</span><h3>Datos de gestión</h3><p>En la primera fila de cada SP se completan origen (Buceo, Cantón 2 o DFR), responsable y Estado SAP.</p></li>
+            <li><span class="flow__k">Paso 3 · Cuando ZAS confirma</span><h3>Cambio de estado</h3><p>Se elige el nuevo Estado SAP una sola vez, en la celda amarilla de la fila principal.</p></li>
+            <li><span class="flow__k">Paso 4 · Tablero</span><h3>Recalculo automático</h3><p>La SP cambia de etapa y su importe pasa al subtotal de la etapa nueva. El total general no cambia.</p></li>
+          </ol>
+
+          <h3 style="margin-top:1.5rem">Qué etapa muestra el Tablero según el Estado SAP</h3>
+          <table class="map">
+            <thead><tr><th scope="col">Estado SAP en SolPed ZAS</th><th scope="col" class="arrow" aria-hidden="true"></th><th scope="col">Etapa en el Tablero</th><th scope="col">Qué significa</th></tr></thead>
+            <tbody>
+              <tr><td>Retenida</td><td class="arrow" aria-hidden="true">&rarr;</td><td><span class="tag-st tag-st--ini">Inicio</span></td><td>La SP está registrada como retenida.</td></tr>
+              <tr><td>Grabada</td><td class="arrow" aria-hidden="true">&rarr;</td><td><span class="tag-st tag-st--pro">En proceso</span></td><td>ZAS confirmó que la SP quedó grabada.</td></tr>
+              <tr><td>Adjudicada</td><td class="arrow" aria-hidden="true">&rarr;</td><td><span class="tag-st tag-st--fin">Finalizada</span></td><td>La compra fue adjudicada.</td></tr>
+              <tr class="map__sep"><td>Vacío</td><td class="arrow" aria-hidden="true">&rarr;</td><td><span class="tag-st tag-st--ver">Falta verificar estado en SAP</span></td><td>No es una etapa: el estado no está cargado. No indica falta de presupuesto. Se muestra el último avance documentado (por ejemplo, OC notificada o entregas).</td></tr>
+              <tr><td>Anulada o Sustituida</td><td class="arrow" aria-hidden="true">&rarr;</td><td><span class="tag-st tag-st--fue">Fuera de flujo</span></td><td>No suma en las etapas. Se cuenta aparte.</td></tr>
+            </tbody>
+          </table>
+          <p class="small" style="margin-top:.6rem">Las líneas adicionales de una SP aparecen en gris en SolPed ZAS y no llevan estado: la etapa siempre sale de la fila principal.</p>
+        </section>
+
+        <section class="section" aria-labelledby="partes">
+          <span class="eyebrow">Partes del Tablero</span>
+          <h2 id="partes">Qué muestra cada sección</h2>
+          <ul class="grid grid--3" style="list-style:none;padding:0;margin:0">
+            <li class="card"><h3>1. Flujo</h3><p>Cantidad de SP y presupuesto solicitado por etapa. Se puede filtrar por unidad y por responsable.</p></li>
+            <li class="card"><h3>2. Mapa de calor</h3><p>SP por unidad (Buceo, Cantón 2, DFR) y por etapa, sin filtros, con los totales del año.</p></li>
+            <li class="card"><h3>3. Buscar repuesto</h3><p>Busca por descripción, código SAP, pedido interno o número de SP en la planilla y en los historiales.</p></li>
+            <li class="card"><h3>4. Confirmación de ZAS</h3><p>Se pega la lista de SP que ZAS informa como grabadas y el Tablero indica en cuáles hay que cambiar el estado.</p></li>
+            <li class="card"><h3>5. Listados por etapa</h3><p>Las SP de cada etapa. En «Falta verificar estado en SAP» se ve primero el último avance documentado.</p></li>
+            <li class="card"><h3>Envío semanal</h3><p>Hoja aparte con las SP marcadas para pedir presupuesto, en el formato de ZAS, lista para copiar.</p></li>
+          </ul>
+          <div class="note" style="margin-top:1rem">
+            <span class="note__title">Presupuesto solicitado</span>
+            <p>Es la suma del «Importe en pesos» de la planilla semanal, solo para las SP con importe validado. No es dinero asignado ni importe adjudicado. Figurar en una semana de la planilla de ZAS no prueba que se haya asignado dinero.</p>
           </div>
         </section>
 
