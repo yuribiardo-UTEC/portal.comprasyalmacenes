@@ -1,5 +1,5 @@
 /* =========================================================
-   Portal Operativo de Compras · V2 · app.js
+   Portal Operativo de Compras · V3 · app.js
    JavaScript sin dependencias. El sitio se puede leer y
    navegar sin JavaScript; este archivo agrega el menú móvil
    y el buscador.
@@ -7,7 +7,7 @@
 
 /* EDITAR AQUÍ: datos generales que se muestran en todas las páginas */
 const CONFIG = {
-  version: "V2",
+  version: "V3",
   correo: "comprasyalmacenes.suministros@imm.gub.uy"
 };
 
