@@ -59,15 +59,19 @@
           <p class="lead">Acceso al Dashboard de Cuentas Corrientes, la planilla de Google Sheets donde se consulta el consumo de los servicios contratados.</p>
         </header>
 
-        <section class="prio" aria-labelledby="prio-servicios">
-          <div class="prio__head"><h2 id="prio-servicios">Clasificación de servicios según importancia</h2><span class="pill pill--crit">Prioridad 1 · Críticos</span></div>
-          <h3>Prioridad 1 · Servicios críticos</h3>
-          <p>Servicios de los que no se puede prescindir para sostener la operatividad de la flota:</p>
-          <ul>
-              <li>Servicio de recauchutaje de neumáticos.</li>
-              <li>Servicio de ITV.</li>
+        <section class="crit" aria-labelledby="crit-servicios">
+          <div class="crit__head">
+            <span class="crit__mark"><svg viewBox="0 0 48 48" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M30.5 8.5a9 9 0 0 0-10.8 11.7L8.6 31.3a3.5 3.5 0 0 0 5 5l11.1-11.1A9 9 0 0 0 36.5 14.4l-5.3 5.3-4.9-1-1-4.9z"/></svg></span>
+            <div class="crit__titles">
+              <div class="crit__title"><h2 id="crit-servicios">Servicios críticos</h2><span class="pill pill--crit">Prioridad 1 · Críticos</span></div>
+              <p class="crit__lead">Esenciales para la operatividad de la flota</p>
+            </div>
+          </div>
+          <ul class="crit__grid crit__grid--2">
+            <li class="crit-card"><span class="crit-card__icon"><svg viewBox="0 0 48 48" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="28" cy="24" rx="10" ry="17"/><ellipse cx="28" cy="24" rx="4.5" ry="8"/><path d="M28 7h-8c-5.5 0-10 7.6-10 17s4.5 17 10 17h8"/><path d="M13 14h5M11 20h5M10.5 26h5M11.5 32h5M14 37h5"/></svg></span><span class="crit-card__text"><span class="crit-card__name">Recauchutaje de neumáticos</span></span></li>
+            <li class="crit-card"><span class="crit-card__icon"><svg viewBox="0 0 48 48" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="10" y="8" width="28" height="34" rx="2"/><path d="M19 8V5h10v3"/><path d="M15 21l2.5 2.5L22 19M15 31l2.5 2.5L22 29"/><path d="M26 22h7M26 32h7"/><path d="M15 13h18"/></svg></span><span class="crit-card__text"><span class="crit-card__name">ITV</span></span></li>
           </ul>
-          <p class="prio__dev">Clasificación en desarrollo: se continuará con la identificación de los servicios importantes de prioridad 2.</p>
+          <p class="crit__foot"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></svg>Prioridad 2: clasificación en desarrollo</p>
         </section>
 
         <section class="card feature" aria-labelledby="dash">

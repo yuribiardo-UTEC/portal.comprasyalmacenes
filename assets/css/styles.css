@@ -287,16 +287,44 @@ details .src { font-size: .82rem; color: var(--muted); }
 .foot p { margin: 0 0 .25rem; }
 .foot strong { color: var(--navy); }
 
-/* Clasificación por importancia (Prioridad 1) */
-.prio { background: var(--white); border: 1px solid var(--line); border-left: 5px solid #A93226; border-radius: var(--radius); padding: 1.1rem 1.25rem; margin: 0 0 1.25rem; }
-.prio__head { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem .75rem; margin-bottom: .35rem; }
-.prio h2 { font-size: 1.15rem; margin: 0; color: var(--navy); }
-.prio h3 { font-size: 1rem; margin: .5rem 0 .25rem; color: var(--navy); }
-.prio p { margin: 0 0 .4rem; }
-.prio ul { margin: .25rem 0 .6rem; padding-left: 1.25rem; }
-.prio li { margin: .15rem 0; }
-.prio__dev { font-size: .88rem; color: var(--muted); font-style: italic; margin: 0; }
-.pill--crit { background: #FBE9E7; color: #8E2A20; border: 1px solid #E8B4AE; }
+/* Clasificación por importancia (Prioridad 1 · tarjetas) */
+.crit { --crit: #8C1C2E; --crit-soft: #F7ECEE; background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.25rem 1.35rem 1rem; margin: 0 0 1.5rem; color: var(--navy); }
+.crit__head { display: flex; align-items: center; gap: .9rem; margin-bottom: 1.1rem; }
+.crit__mark { flex: 0 0 auto; width: 50px; height: 50px; display: grid; place-items: center; background: var(--crit-soft); border-radius: var(--radius); color: var(--crit); }
+.crit__mark svg { width: 32px; height: 32px; }
+.crit__titles { min-width: 0; }
+.crit__title { display: flex; flex-wrap: wrap; align-items: center; gap: .4rem .8rem; }
+.crit h2 { margin: 0; font-size: 1.45rem; color: var(--navy); }
+.crit__lead { margin: .2rem 0 0; color: var(--muted); }
+.pill--crit { background: var(--crit-soft, #F7ECEE); color: var(--crit, #8C1C2E); border: 1px solid #EBCFD4; }
+.crit__grid { list-style: none; margin: 0; padding: 0; display: grid; gap: 1rem; }
+.crit__grid--2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.crit__grid--4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.crit-card { position: relative; margin: 0; background: var(--white); border: 1px solid #C9D0DC; border-radius: var(--radius); padding: 1.1rem 1rem; display: flex; align-items: center; gap: 1rem; min-width: 0; }
+.crit-card::after { content: ""; position: absolute; top: -1px; right: 14px; width: 12px; height: 16px; background: var(--crit); clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 72%, 0 100%); }
+.crit-card__icon { flex: 0 0 auto; width: 88px; height: 88px; border-radius: 50%; background: var(--crit-soft); display: grid; place-items: center; color: var(--navy); }
+.crit-card__icon svg { width: 56px; height: 56px; }
+.crit-card__text { min-width: 0; }
+.crit-card__name { display: block; font-size: 1.1rem; font-weight: 700; color: var(--navy); line-height: 1.25; overflow-wrap: anywhere; }
+.crit-card__sub { display: block; margin-top: .2rem; font-size: .86rem; color: var(--muted); line-height: 1.3; }
+.crit__grid--2 .crit-card__text { border-left: 1px solid var(--line); padding-left: 1rem; align-self: stretch; display: flex; flex-direction: column; justify-content: center; }
+.crit__grid--4 .crit-card { flex-direction: column; text-align: center; padding: 1.2rem .8rem 1rem; }
+.crit__foot { display: flex; align-items: center; gap: .5rem; margin: 1rem 0 0; padding-top: .75rem; border-top: 1px solid var(--line); font-size: .9rem; font-style: italic; color: var(--muted); }
+.crit__foot svg { flex: 0 0 auto; width: 18px; height: 18px; color: var(--muted); }
+@media (max-width: 1100px) { .crit__grid--4 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 640px) {
+  .crit { padding: 1rem .9rem .85rem; }
+  .crit__head { align-items: flex-start; }
+  .crit h2 { font-size: 1.25rem; }
+  .crit__grid--2 { grid-template-columns: 1fr; }
+  .crit__grid--4 { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .75rem; }
+  .crit-card__icon { width: 70px; height: 70px; }
+  .crit-card__icon svg { width: 44px; height: 44px; }
+  .crit__grid--4 .crit-card { padding: 1rem .5rem .85rem; }
+  .crit__grid--4 .crit-card__name { font-size: 1rem; }
+}
+@media (max-width: 360px) { .crit__grid--4 { grid-template-columns: 1fr; } }
+
 .pending { background: var(--white); border: 1px dashed #B7BECB; border-radius: var(--radius); padding: 1rem 1.25rem; color: var(--muted); }
 .pending strong { color: var(--navy); }
 
