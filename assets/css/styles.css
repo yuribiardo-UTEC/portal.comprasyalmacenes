@@ -287,6 +287,19 @@ details .src { font-size: .82rem; color: var(--muted); }
 .foot p { margin: 0 0 .25rem; }
 .foot strong { color: var(--navy); }
 
+/* Clasificación por importancia (Prioridad 1) */
+.prio { background: var(--white); border: 1px solid var(--line); border-left: 5px solid #A93226; border-radius: var(--radius); padding: 1.1rem 1.25rem; margin: 0 0 1.25rem; }
+.prio__head { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem .75rem; margin-bottom: .35rem; }
+.prio h2 { font-size: 1.15rem; margin: 0; color: var(--navy); }
+.prio h3 { font-size: 1rem; margin: .5rem 0 .25rem; color: var(--navy); }
+.prio p { margin: 0 0 .4rem; }
+.prio ul { margin: .25rem 0 .6rem; padding-left: 1.25rem; }
+.prio li { margin: .15rem 0; }
+.prio__dev { font-size: .88rem; color: var(--muted); font-style: italic; margin: 0; }
+.pill--crit { background: #FBE9E7; color: #8E2A20; border: 1px solid #E8B4AE; }
+.pending { background: var(--white); border: 1px dashed #B7BECB; border-radius: var(--radius); padding: 1rem 1.25rem; color: var(--muted); }
+.pending strong { color: var(--navy); }
+
 /* Flujo del Tablero de Seguimiento */
 .flow { list-style: none; margin: 0 0 1rem; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.6rem; }
 .flow > li { position: relative; margin: 0; background: var(--white); border: 1px solid var(--line); border-top: 4px solid var(--navy); border-radius: var(--radius); padding: .9rem 1rem; }
