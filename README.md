@@ -13,6 +13,7 @@ El portal tiene carácter informativo y operativo. Ante diferencias, prevalecen 
 | `pr-01.html` a `pr-04.html` | Ficha de cada procedimiento |
 | `documentos.html` | Modelos Word, procedimientos PDF y Protocolo |
 | `servicios.html` | Acceso al Dashboard de Cuentas Corrientes (Google Sheets) |
+| `planificacion.html` | Planificación anual de adquisiciones 2027 (en preparación) |
 | `seguimiento.html` | Seguimiento general de solicitudes y compras (enlace al Registro SP en Google Sheets) |
 | `como-empezar.html`, `preguntas.html` | Ayuda: cómo empezar una solicitud, preguntas frecuentes y contacto |
 | `assets/css/styles.css` | Estilos |

@@ -14,6 +14,7 @@ const CONFIG = {
 /* EDITAR AQUÍ: índice del buscador.
    t: título · p: página · u: enlace · k: palabras clave */
 const SEARCH_INDEX = [
+  { t: "Planificación anual de adquisiciones 2027", p: "Planificación", u: "planificacion.html", k: "planificacion anual adquisiciones 2027 historico consumos compras mantenimiento almacenes en preparacion" },
   { t: "Inicio", p: "Inicio", u: "index.html", k: "inicio portal mantenimiento compras trabajo conjunto" },
   { t: "¿Por dónde empiezo?", p: "Inicio", u: "index.html#por-donde", k: "empezar empiezo orientacion guia necesito" },
   { t: "Procedimientos PR-01 a PR-04", p: "Procedimientos", u: "procedimientos.html", k: "procedimientos guias circuito pr01 pr02 pr03 pr04" },
